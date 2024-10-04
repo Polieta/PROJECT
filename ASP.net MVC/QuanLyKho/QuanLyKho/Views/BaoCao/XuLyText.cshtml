@@ -1,0 +1,222 @@
+﻿@{
+    ViewBag.Title = "XuLyText";
+}
+<style>
+    .swal2-input-group {
+        margin-bottom: 10px; /* Khoảng cách giữa các nhóm input */
+        display: flex;
+        align-items: center;
+    }
+
+        .swal2-input-group label {
+            flex: 0 0 120px; /* Điều chỉnh độ rộng của nhãn */
+            margin-right: 10px; /* Khoảng cách giữa nhãn và ô input */
+        }
+
+        .swal2-input-group input {
+            flex: 1; /* Ô input chiếm phần còn lại của không gian */
+        }
+</style>
+<h2>Xử lý dữ liệu văn bản</h2>
+<div id="alertDiv" class="d-none"></div>
+<form id="productForm" action="@Url.Action("NhanDuLieu", "NhapKho")" method="post" style="display: none;">
+    <input type="hidden" id="ma" name="ma" value="@ViewBag.ma" />
+    <input type="hidden" id="lot" name="lot" value="@ViewBag.lot" />
+    <input type="hidden" id="nsx" name="nsx" value="@ViewBag.nsx" />
+    <input type="hidden" id="hsd" name="hsd" value="@ViewBag.hsd" />
+</form>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script>
+    var maPhieu = localStorage.getItem('maPhieu');
+    // Lấy dữ liệu từ ViewBag
+    var ma = "@ViewBag.ma";
+    var lot = "@ViewBag.lot";
+    var nsx = "@ViewBag.nsx";
+    var hsd = "@ViewBag.hsd";
+    // Format ngày tháng năm từ chuỗi ngày
+    function formatDate(dateString) {
+        if (dateString === "") {
+            return "không có";
+        }
+        var date = new Date(dateString);
+        var day = date.getDate();
+        var month = date.getMonth() + 1;
+        var year = date.getFullYear();
+        return (day < 10 ? '0' : '') + day + '/' + (month < 10 ? '0' : '') + month + '/' + year;
+    }
+    // Hiển thị thông báo với các trường input cho việc chỉnh sửa
+    var ten = ""; // Khai báo biến ten
+    //document.getElementById('inputMa').addEventListener('change', function () {
+    //    timTenHangHoa();
+    //});
+    document.addEventListener('DOMContentLoaded', function () {
+    var ma = "@ViewBag.ma"; // Lấy giá trị của ma từ ViewBag
+    if (ma) {
+        timTenHangHoa(ma); // Gọi hàm timTenHangHoa() nếu ma có giá trị
+    }
+    Swal.fire({
+        title: 'Thông tin sản phẩm',
+        html:
+            '<div class="swal2-input-group">' +
+            '<label for="inputMa">Mã hàng hóa:</label>' +
+            '<input id="inputMa" class="swal2-input" value="' + ma + '">' +
+            '</div>' +
+            '<div class="swal2-input-group">' +
+            '<label for="tenHangHoa">Tên hàng hóa:</label>' +
+            '<input id="tenHangHoa" class="swal2-input" readonly>' +
+            '</div>' +
+            '<div class="swal2-input-group">' +
+            '<label for="inputLot">Số Lô:</label>' +
+            '<input id="inputLot" class="swal2-input" value="' + lot + '">' +
+            '</div>' +
+            '<div class="swal2-input-group">' +
+            '<label for="inputNsx">Ngày sản xuất:</label>' +
+            '<input id="inputNsx" class="swal2-input" value="' + nsx + '" readonly>' +
+            '</div>' +
+            '<div class="swal2-input-group">' +
+            '<label for="inputHsd">Hạn sử dụng:</label>' +
+            '<input id="inputHsd" class="swal2-input" value="' + hsd + '" readonly>' +
+            '</div>' +
+            '<div class="swal2-input-group">' +
+            '<label for="inputQuantity">Số lượng:</label>' +
+            '<input id="inputQuantity" class="swal2-input" type="number" min="1" value="1">' +
+            '</div>',
+        icon: 'info',
+        showCancelButton: true,
+        confirmButtonText: 'Lưu',
+        cancelButtonText: 'Chụp lại',
+        showCloseButton: true,
+        didOpen: () => {
+            // Khởi tạo flatpickr cho các ô ngày tháng năm
+            flatpickr("#inputNsx", {
+                dateFormat: "d/m/Y",
+                allowInput: true,
+                defaultDate: nsx === "" ? null : nsx,
+            });
+            flatpickr("#inputHsd", {
+                dateFormat: "d/m/Y",
+                allowInput: true,
+                defaultDate: hsd === "" ? null : hsd,
+            });
+            document.getElementById('inputMa').addEventListener('input', function () {
+                var newMa = this.value; // Lấy giá trị mới của ô "Mã hàng hóa"
+                timTenHangHoa(newMa); // Gọi hàm `timTenHangHoa` với mã hàng hóa mới
+            });
+        }
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Lấy giá trị từ các trường input
+            var ma = document.getElementById('inputMa').value;
+            var lot = document.getElementById('inputLot').value;
+            var nsx = document.getElementById('inputNsx').value;
+            var hsd = document.getElementById('inputHsd').value;
+            var quantity = document.getElementById('inputQuantity').value;
+            var tenHangHoa = document.getElementById('tenHangHoa').value;
+            if (tenHangHoa === "" || tenHangHoa === "không có") {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Cảnh báo',
+                    text: 'Vui lòng nhập tên hàng hóa.',
+                });
+                window.location.href = '@Url.Action("ScanText", "BaoCao")';
+            } else {
+                // Gửi dữ liệu đi sử dụng AJAX
+                $.ajax({
+                    url: '@Url.Action("LuuDuLieuTam", "NhapKho")',
+                    type: 'POST',
+                    data: {
+                        maphieu: maPhieu,
+                        mahang: ma,
+                        solo: lot,
+                        soluong: quantity,
+                        nsx: nsx,
+                        hsd: hsd
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            IN_QR(ma,lot,nsx,hsd);
+                            Swal.fire({
+                                title: "Thành công",
+                                text: "Dữ liệu đã được thêm",
+                                icon: "success",
+                                willClose: () => {
+                                    window.location.href = '@Url.Action("ScanText", "BaoCao")';
+                                }
+                            });
+                        } else {
+                            // Xử lý khi có lỗi từ phía server
+                            Swal.fire({
+                                icon: 'error',
+                                title: 'Lỗi',
+                                text: 'Đã có lỗi xảy ra khi lưu dữ liệu.',
+                            })
+                        }
+                    },
+                    error: function () {
+                        // Xử lý khi có lỗi xảy ra trong quá trình gửi request
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Lỗi',
+                            text: 'Đã có lỗi xảy ra khi gửi dữ liệu.',
+                        });
+                    }
+                });
+            }
+        } else {
+            window.location.href = '@Url.Action("ScanText", "BaoCao")';
+        }
+    });
+});
+
+    function timTenHangHoa(ma) {
+        var maHangHoa = ma;
+        if (maHangHoa !== '') {
+            $.ajax({
+                url: '/NhapKho/TimTenHangHoa',
+                type: 'GET',
+                data: { maHangHoa: maHangHoa },
+                success: function (response) {
+                    if (response.success) {
+                        document.getElementById('tenHangHoa').value = response.tenHangHoa;
+                        ten = response.tenHangHoa; // Gán giá trị của ten từ phản hồi thành công
+                    }
+                },
+            });
+        } else {
+            // Nếu không có dữ liệu từ mã hàng hóa, gán giá trị là "không có"
+            document.getElementById('tenHangHoa').value = "không có";
+            ten = ""; // Đặt giá trị của ten về rỗng
+        }
+    }
+
+    function IN_QR(maHangHoa,soLo, nSx, hSd){
+        $.ajax({
+            url: '/NhapKho/InTem',
+            type: 'POST',
+            data: {
+                maHangHoa: maHangHoa,
+                soLo: soLo,
+                nSx: nSx,
+                hSd: hSd
+            },
+            success: function (response) {
+                if (response.success) {
+                    swal("Loading....", "Tiến hàng in QR", "success")
+                    .then(function () {
+                        // Thực hiện chuyển hướng sau khi nhấn nút OK trong thông báo
+                        window.location.href = '/ViewReport.aspx';
+                    });
+                } else {
+                    swal("Lỗi", "gghgj", "error");
+                }
+            },
+            error: function () {
+                swal("Lỗi", "Lỗi IN QR", "error");
+            }
+        });
+    }
+
+</script>

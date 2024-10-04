@@ -1,0 +1,156 @@
+﻿@model QuanLyKho.Models.tblhanghoa
+@{
+    ViewBag.Title = "Sửa hàng hóa";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    /* CSS để label và textbox nằm ngang và gần nhau */
+    .form-horizontal .form-group {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-horizontal .control-label {
+        width: 30%;
+        margin-right: 10px;
+        text-align: right;
+    }
+
+    .form-horizontal .col-md-10 {
+        width: 70%;
+    }
+
+    .form-horizontal input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Tùy chỉnh giao diện của nút */
+    .btn-custom {
+        border: 1px solid #ccc;
+        padding: 8px 15px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    /* Định dạng div để căn giữa trên màn hình */
+    .center-content {
+        text-align: center;
+        margin: 0 auto;
+        width: 50%; /* Điều chỉnh chiều rộng của div nếu cần thiết */
+    }
+
+    .custom-error-text {
+        background-color: rgba(255, 255, 255, 0); /* Màu nền trong suốt */
+        color: red; /* Màu chữ đỏ */
+    }
+</style>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 style="text-align:center">Sửa thông tin hàng hóa</h2>
+            @using (Html.BeginForm("SuaHangHoa", "HangHoa", FormMethod.Post, new { id = "addForm", onsubmit = "return validateForm()" }))
+            {
+                @Html.AntiForgeryToken()
+                <hr />
+                @Html.ValidationSummary(true)
+                @Html.HiddenFor(model => model.id)
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.ma, "Mã hàng hóa", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.ma, new { @readonly = "readonly", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.ten, "Tên hàng hóa", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.ten, new { id = "ten", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.ten)
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.mota, "Mô tả", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.mota, new { id = "mota", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.mota)
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.dvt, "Đơn vị tính", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.DropDownListFor(model => model.dvt, ViewBag.dvt as SelectList, new { id = "dvt", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.dvt)
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.loaihang, "Loại hàng", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.DropDownListFor(model => model.loaihang, ViewBag.lh as SelectList, new { id = "loaihang", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.loaihang)
+                    </div>
+                </div>
+                <div class="form-group row">
+                    @Html.LabelFor(model => model.nhomhang, "Nhóm hàng", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.DropDownListFor(model => model.nhomhang, ViewBag.nh as SelectList, new { id = "nhomhang", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.nhomhang)
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <div class="col-md-offset-3 col-md-9">
+                        <input type="submit" value="Save" class="btn btn-custom" />
+                    </div>
+                </div>
+            }
+            <div style="text-align:center">
+                @Html.ActionLink("Trở lại", "HangHoa", "HangHoa")
+            </div>
+        </div>
+    </div>
+</div>
+
+        <div id="custom-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border: 1px solid #ccc; z-index: 9999; text-align: center;">
+            <p id="custom-popup-text" class="custom-error-text" style="font-size: 18px; margin-bottom: 20px;"></p>
+            <button onclick="closeCustomPopup()" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; font-size: 16px; border-radius: 4px; transition: background-color 0.3s;">OK</button>
+        </div>   
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.0/css/select2.min.css" rel="stylesheet" />
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.0/js/select2.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                $('#dvt, #loaihang, #nhomhang').select2({
+                    width: '100%', // Thiết lập chiều rộng là 100% để mở rộng linh hoạt
+                    placeholder: "Chọn một tùy chọn", // Placeholder cho dropdown list
+                    allowClear: true // Cho phép xóa lựa chọn
+                    // Các tùy chọn khác của Select2 có thể được thêm vào ở đây
+                });
+            });
+        </script>
+        <script>
+
+            function closeCustomPopup() {
+                document.getElementById("custom-popup").style.display = "none";
+            }
+
+            function validateForm() {
+                var tenValue = document.getElementById("ten").value;
+                var motaValue = document.getElementById("mota").value;
+                var dvtValue = document.getElementById("dvt").value;
+                var nhomhangValue = document.getElementById("nhomhang").value;
+                var loaihangValue = document.getElementById("loaihang").value;
+                if (tenValue.trim() === '' || motaValue.trim() === '' || dvtValue.trim() === '' || nhomhangValue.trim() === '' || loaihangValue.trim() === '') {
+                    document.getElementById("custom-popup-text").innerHTML = "Vui lòng điền đầy đủ thông tin";
+                    document.getElementById("custom-popup").style.display = "block";
+                    return false; // Ngăn không cho form submit nếu có trường trống
+                }
+                return true; // Cho phép submit nếu tất cả các trường đã được điền đầy đủ
+            }
+        </script>

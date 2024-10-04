@@ -1,0 +1,102 @@
+
+{% extends "page/layout_home.html" %}
+{% load static %}
+{% block title %}
+{% endblock %}
+{% block slider %}
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="10000">
+        <img src="{% static 'banner/b1.jpg' %}" class="d-block w-100" alt="Giảm 50%" height="480">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Giảm 30%</h5>
+          <p>Chương trình khuyến mãi giảm 30%</p>
+        </div>
+      </div>
+      <div class="carousel-item " data-bs-interval="2000">
+        <img src="{% static 'banner/b2.jpg' %}" class="d-block w-100" alt="..."height="480">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Giảm 50%</h5>
+          <p>Chương trình khuyến mãi giảm đến 50%</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'banner/b3.png' %}" class="d-block w-100" alt="..."height="480">
+        <div class="carousel-caption d-none d-md-block">
+          <h5></h5>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+{% endblock %}
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Kết quả tìm kiếm cho: "{{ query }}"</h3>
+            <p>Giá từ: {{ gia_min|default:"Không có" }} VND đến {{ gia_max|default:"Không có" }} VND</p>
+        </div>
+    </div>
+    <!-- Hiển thị sản phẩm -->
+    <div class="row">
+        {% for sanpham in page_obj %}
+            <div class="col-lg-4 mb-4">
+                <div class="card">
+                    <img class="card-img-top img-thumbnail" src="{{ sanpham.hinh_anh.url }}" alt="{{ sanpham.ten_san_pham }}">
+                    <div class="card-body">
+                        <h5 class="card-title"><strong>{{ sanpham.ten_san_pham }}</strong></h5>
+                        <p class="card-text">{{ sanpham.mo_ta }}</p>
+                        <p><strong>Giá: </strong>{{ sanpham.gia }} VND</p>
+                        <form method="post" action="{% url 'them_vao_gio_hang' sanpham.ma_san_pham %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-outline-secondary">Thêm vào giỏ hàng</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+    <!-- Hiển thị phân trang -->
+    <nav aria-label="Page navigation example">
+        <ul class="pagination">
+            {% if page_obj.has_previous %}
+                <li class="page-item">
+                    <a class="page-link" href="?page=1{% if query %}&q={{ query }}{% endif %}{% if gia_min %}&gia_min={{ gia_min }}{% endif %}{% if gia_max %}&gia_max={{ gia_max }}{% endif %}" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+            {% endif %}
+            {% for num in page_obj.paginator.page_range %}
+                <li class="page-item {% if page_obj.number == num %}active{% endif %}">
+                    <a class="page-link" href="?page={{ num }}{% if query %}&q={{ query }}{% endif %}{% if gia_min %}&gia_min={{ gia_min }}{% endif %}{% if gia_max %}&gia_max={{ gia_max }}{% endif %}">{{ num }}</a>
+                </li>
+            {% endfor %}
+            {% if page_obj.has_next %}
+                <li class="page-item">
+                    <a class="page-link" href="?page={{ page_obj.paginator.num_pages }}{% if query %}&q={{ query }}{% endif %}{% if gia_min %}&gia_min={{ gia_min }}{% endif %}{% if gia_max %}&gia_max={{ gia_max }}{% endif %}" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+</div>
+{% endblock content %}

@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="QuanLyKho_HongLamModelStoreContainer" CdmEntityContainer="QuanLyKho_HongLamEntities">
+    <EntitySetMapping Name="tblcongty">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblcongty">
+        <MappingFragment StoreEntitySet="tblcongty">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="msthue" ColumnName="msthue" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbldangnhap">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tbldangnhap">
+        <MappingFragment StoreEntitySet="tbldangnhap">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="idCongTy" ColumnName="idCongTy" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbldvt">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tbldvt">
+        <MappingFragment StoreEntitySet="tbldvt">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblhanghoa">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblhanghoa">
+        <MappingFragment StoreEntitySet="tblhanghoa">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="dvt" ColumnName="dvt" />
+          <ScalarProperty Name="nhomhang" ColumnName="nhomhang" />
+          <ScalarProperty Name="loaihang" ColumnName="loaihang" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblkiemkeCTkho">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblkiemkeCTkho">
+        <MappingFragment StoreEntitySet="tblkiemkeCTkho">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mahang" ColumnName="mahang" />
+          <ScalarProperty Name="solo" ColumnName="solo" />
+          <ScalarProperty Name="HSD" ColumnName="HSD" />
+          <ScalarProperty Name="sl" ColumnName="sl" />
+          <ScalarProperty Name="nsx" ColumnName="nsx" />
+          <ScalarProperty Name="loaihang" ColumnName="loaihang" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="sttton" ColumnName="sttton" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblkiemkekho">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblkiemkekho">
+        <MappingFragment StoreEntitySet="tblkiemkekho">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mmyyyy" ColumnName="mmyyyy" />
+          <ScalarProperty Name="noidung" ColumnName="noidung" />
+          <ScalarProperty Name="nguoikiemke" ColumnName="nguoikiemke" />
+          <ScalarProperty Name="idkho" ColumnName="idkho" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblkho">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblkho">
+        <MappingFragment StoreEntitySet="tblkho">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblloaihang">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblloaihang">
+        <MappingFragment StoreEntitySet="tblloaihang">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="nhomhang" ColumnName="nhomhang" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbllydoxuat">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tbllydoxuat">
+        <MappingFragment StoreEntitySet="tbllydoxuat">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblnhacc">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblnhacc">
+        <MappingFragment StoreEntitySet="tblnhacc">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="loai" ColumnName="loai" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="sdt" ColumnName="sdt" />
+          <ScalarProperty Name="fax" ColumnName="fax" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mota" ColumnName="mota" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblnhomhang">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblnhomhang">
+        <MappingFragment StoreEntitySet="tblnhomhang">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="ten" ColumnName="ten" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblphieunhapkho">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblphieunhapkho">
+        <MappingFragment StoreEntitySet="tblphieunhapkho">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="nguoinhapphieu" ColumnName="nguoinhapphieu" />
+          <ScalarProperty Name="nguoigiaohang" ColumnName="nguoigiaohang" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="masothue" ColumnName="masothue" />
+          <ScalarProperty Name="diengiai" ColumnName="diengiai" />
+          <ScalarProperty Name="idkho" ColumnName="idkho" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblphieunhapkhoct">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblphieunhapkhoct">
+        <MappingFragment StoreEntitySet="tblphieunhapkhoct">
+          <ScalarProperty Name="maphieu" ColumnName="maphieu" />
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mahanghoa" ColumnName="mahanghoa" />
+          <ScalarProperty Name="stt" ColumnName="stt" />
+          <ScalarProperty Name="hsd" ColumnName="hsd" />
+          <ScalarProperty Name="dvt" ColumnName="dvt" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+          <ScalarProperty Name="nsx" ColumnName="nsx" />
+          <ScalarProperty Name="lot" ColumnName="lot" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblphieuxuatkho">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblphieuxuatkho">
+        <MappingFragment StoreEntitySet="tblphieuxuatkho">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="nguoixuatphieu" ColumnName="nguoixuatphieu" />
+          <ScalarProperty Name="nguoinhanhang" ColumnName="nguoinhanhang" />
+          <ScalarProperty Name="diachi" ColumnName="diachi" />
+          <ScalarProperty Name="idlydoxuat" ColumnName="idlydoxuat" />
+          <ScalarProperty Name="idkho" ColumnName="idkho" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblphieuxuatkhoct">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tblphieuxuatkhoct">
+        <MappingFragment StoreEntitySet="tblphieuxuatkhoct">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="mahanghoa" ColumnName="mahanghoa" />
+          <ScalarProperty Name="tenhanghoa" ColumnName="tenhanghoa" />
+          <ScalarProperty Name="stt" ColumnName="stt" />
+          <ScalarProperty Name="solo" ColumnName="solo" />
+          <ScalarProperty Name="hsd" ColumnName="hsd" />
+          <ScalarProperty Name="dvt" ColumnName="dvt" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="dongia" ColumnName="dongia" />
+          <ScalarProperty Name="thanhtien" ColumnName="thanhtien" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbltaotem">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tbltaotem">
+        <MappingFragment StoreEntitySet="tbltaotem">
+          <ScalarProperty Name="ma" ColumnName="ma" />
+          <ScalarProperty Name="lot" ColumnName="lot" />
+          <ScalarProperty Name="nsx" ColumnName="nsx" />
+          <ScalarProperty Name="hsd" ColumnName="hsd" />
+          <ScalarProperty Name="loaihang" ColumnName="loaihang" />
+          <ScalarProperty Name="nhacc" ColumnName="nhacc" />
+          <ScalarProperty Name="sltem" ColumnName="sltem" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="hide" ColumnName="hide" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbltonkhoct">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tbltonkhoct">
+        <MappingFragment StoreEntitySet="tbltonkhoct">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="idkho" ColumnName="idkho" />
+          <ScalarProperty Name="idn" ColumnName="idn" />
+          <ScalarProperty Name="idx" ColumnName="idx" />
+          <ScalarProperty Name="mahanghoa" ColumnName="mahanghoa" />
+          <ScalarProperty Name="solo" ColumnName="solo" />
+          <ScalarProperty Name="hsd" ColumnName="hsd" />
+          <ScalarProperty Name="tondau" ColumnName="tondau" />
+          <ScalarProperty Name="sln" ColumnName="sln" />
+          <ScalarProperty Name="slx" ColumnName="slx" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+          <ScalarProperty Name="idnguoikk" ColumnName="idnguoikk" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbltonkhoth">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.tbltonkhoth">
+        <MappingFragment StoreEntitySet="tbltonkhoth">
+          <ScalarProperty Name="idkho" ColumnName="idkho" />
+          <ScalarProperty Name="mahanghoa" ColumnName="mahanghoa" />
+          <ScalarProperty Name="tondau" ColumnName="tondau" />
+          <ScalarProperty Name="sln" ColumnName="sln" />
+          <ScalarProperty Name="slx" ColumnName="slx" />
+          <ScalarProperty Name="ngayud" ColumnName="ngayud" />
+          <ScalarProperty Name="idcongty" ColumnName="idcongty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="bangtamnhapkho">
+      <EntityTypeMapping TypeName="QuanLyKho_HongLamModel.bangtamnhapkho">
+        <MappingFragment StoreEntitySet="bangtamnhapkho">
+          <ScalarProperty Name="stt" ColumnName="stt" />
+          <ScalarProperty Name="tenhanghoa" ColumnName="tenhanghoa" />
+          <ScalarProperty Name="maphieu" ColumnName="maphieu" />
+          <ScalarProperty Name="soluong" ColumnName="soluong" />
+          <ScalarProperty Name="hsd" ColumnName="hsd" />
+          <ScalarProperty Name="nsx" ColumnName="nsx" />
+          <ScalarProperty Name="solo" ColumnName="solo" />
+          <ScalarProperty Name="mahanghoa" ColumnName="mahanghoa" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

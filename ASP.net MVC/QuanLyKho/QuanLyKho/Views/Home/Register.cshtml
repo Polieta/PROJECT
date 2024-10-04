@@ -1,0 +1,208 @@
+﻿@{
+    ViewBag.Title = "Trang đăng ký";
+    Layout = "~/Views/Shared/DangNhap_DangKy.cshtml";
+}
+<style>
+    /* CSS để tùy chỉnh phần hiển thị thông báo */
+    .custom-success-message {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 9999;
+        text-align: center;
+        width: 60%; /* Điều chỉnh kích thước thông báo */
+        max-width: 400px; /* Kích thước tối đa */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng shadow */
+    }
+
+    .custom-success-text {
+        font-size: 18px; /* Điều chỉnh kích thước chữ */
+        margin-bottom: 20px; /* Khoảng cách với nút OK */
+    }
+
+    .custom-close-button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+        .custom-close-button:hover {
+            background-color: #c82333;
+        }
+
+</style>
+<div class="row justify-content-md-center">
+    <div class="col-md-5">
+   @using (Html.BeginForm("Register", "Home", FormMethod.Post, new { onsubmit = "return validateForm()" }))
+   {
+      @Html.AntiForgeryToken()
+    <div class="card">
+        <div class="card-header">
+            <div class="card-title" style="align-items:center"><h1>Đăng Ký</h1></div>
+        </div>
+        <div class="main-agileinfo">
+            <div class="agileits-top">
+                    <div class="form-group">
+                        Tên
+                        @Html.TextBox("name", "", new { @class = "form-control", onkeyup = "clearError('name')" })
+                        <div id="name-error" style="color: red; display: none;">Vui lòng nhập tên.</div>
+                    </div>
+                    <div class="form-group">
+                        Email
+                        @Html.TextBox("email", "", new { @class = "form-control", onkeyup = "clearError('email')" })
+                        <div id="email-error" style="color: red; display: none;">Vui lòng nhập email.</div>
+                    </div>
+                    <div class="form-group">
+                        Mật khẩu
+                        @Html.TextBox("matkhau", "", new { @class = "form-control", onkeyup = "clearError('matkhau')" })
+                        <div id="matkhau-error" style="color: red; display: none;">Vui lòng nhập mật khẩu.</div>
+                    </div>
+                    <div class="form-group">
+                        Nhập lại mật khẩu
+                        @Html.TextBox("rematkhau", "", new { @class = "form-control", onkeyup = "clearError('rematkhau')" })
+                        @Html.ValidationMessage("rematkhau", new { @style = "color: red;" })
+                    </div>
+                    <div class="form-group">
+                        Mã công ty
+                        @Html.TextBox("macongty", "", new { @class = "form-control", onkeyup = "clearError('macongty')" })
+                        <div id="maconty-error" style="color: red; display: none;">Vui lòng nhập mã công ty.</div>
+                    </div>
+                    <div class="form-group">
+                        Tên công ty
+                        @Html.TextBox("tencongty", "", new { @class = "form-control", onkeyup = "clearError('tencongty')" })
+                        <div id="tencongty-error" style="color: red; display: none;">Vui lòng nhập tên công ty.</div>
+                    </div>
+                    <div class="form-group">
+                        Địa chỉ
+                        @Html.TextBox("diachi", "", new { @class = "form-control", onkeyup = "clearError('diachi')" })
+                        <div id="diachi-error" style="color: red; display: none;">Vui lòng nhập địa chỉ.</div>
+                    </div>
+                    <div class="form-group">
+                        Mã số thuế
+                        @Html.TextBox("msthue", "", new { @class = "form-control", onkeyup = "clearError('msthue')" })
+                        <div id="msthue-error" style="color: red; display: none;">Vui lòng nhập số thuế.</div>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" name="submit" class="btn btn-danger" value="Đăng ký" />
+                    </div>
+                    <div class="form-group">
+                        <p>Đã có tài khoản <a href="/Home/Login">Đăng nhập</a></p>
+                    </div>
+            </div>
+        </div>
+        </div>
+            <div id="error-message" style="color: red; margin-top: 10px;"></div>
+    }
+        <div id="success-popup" class="custom-success-message" style="display: none;">
+            <p id="success-popup-text" class="custom-success-text"></p>
+            <button onclick="closeSuccessPopup()" class="custom-close-button">OK</button>
+        </div>
+
+        <div id="error-popup" class="custom-success-message" style="display: none;">
+            <p id="error-popup-text" class="custom-success-text"></p>
+            <button onclick="closeErrorPopup()" class="custom-close-button">OK</button>
+        </div>
+    </div>
+ </div>
+<script>
+    function validateForm() {
+        var name = document.getElementById("name").value;
+        var email = document.getElementById("email").value;
+        var matkhau = document.getElementById("matkhau").value;
+        var rematkhau = document.getElementById("rematkhau").value;
+        var macongty = document.getElementById("macongty").value;
+        var tencongty = document.getElementById("tencongty").value;
+        var diachi = document.getElementById("diachi").value;
+        var msthue = document.getElementById("msthue").value;
+        // Kiểm tra từng trường riêng lẻ và hiển thị thông báo lỗi tương ứng
+        if (name === "") {
+            document.getElementById("name-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("name-error").style.display = "none";
+        }
+        if (email === "") {
+            document.getElementById("email-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("email-error").style.display = "none";
+        }
+        if (matkhau === "") {
+            document.getElementById("matkhau-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("matkhau-error").style.display = "none";
+        }
+        if (rematkhau === "") {
+            document.getElementById("rematkhau-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("rematkhau-error").style.display = "none";
+        }
+        if (macongty === "") {
+            document.getElementById("macongty-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("macongty-error").style.display = "none";
+        }
+        if (tencongty === "") {
+            document.getElementById("tencongty-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("tencongty-error").style.display = "none";
+        }
+        if (diachi === "") {
+            document.getElementById("diachi-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("diachi-error").style.display = "none";
+        }
+        if (msthue === "") {
+            document.getElementById("msthue-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("msthue-error").style.display = "none";
+        }
+        if (matkhau !== rematkhau) {
+            document.getElementById("rematkhau-error").innerHTML = "Mật khẩu và nhập lại mật khẩu không khớp.";
+            document.getElementById("rematkhau-error").style.display = "block";
+            return false;
+        } else {
+            document.getElementById("rematkhau-error").style.display = "none";
+        }
+        return true;
+    }
+    function clearError(fieldName) {
+        document.getElementById(fieldName + "-error").style.display = "none";
+    }
+    function closeSuccessPopup() {
+        document.getElementById("success-popup").style.display = "none";
+    }
+
+    function closeErrorPopup() {
+        document.getElementById("error-popup").style.display = "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        var successMessage = '@TempData["SuccessMessage"]';
+        var errorMessage = '@TempData["ErrorMessage"]';
+
+        if (successMessage !== '') {
+            document.getElementById("success-popup-text").innerHTML = successMessage;
+            document.getElementById("success-popup").style.display = "block";
+        } else if (errorMessage !== '') {
+            document.getElementById("error-popup-text").innerHTML = errorMessage;
+            document.getElementById("error-popup").style.display = "block";
+        }
+    });
+</script>

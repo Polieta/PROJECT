@@ -1,0 +1,48 @@
+{% extends 'page/layout.html' %}
+{% block content %}
+<div class="menu-admin">
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <!-- Cột bên trái chứa menu -->
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                        <li class="nav-item">
+                            <a href="{% url 'danh_sach_san_pham' %}" class="nav-link align-middle px-0" style="background-color: white;">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">DANH SÁCH SẢN PHẨM</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'them_danh_muc' %}" class="nav-link align-middle px-0" style="background-color: white;">
+                                <i class="fs-4 bi bi-folder-plus"></i> <span class="ms-1 d-none d-sm-inline">Thêm danh mục</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'them_san_pham' %}" class="nav-link align-middle px-0" style="background-color: white;">
+                                <i class="fs-4 bi bi-bag-plus-fill"></i> <span class="ms-1 d-none d-sm-inline">Thêm sản phẩm</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'tai_khoan_khach_hang' %}" class="nav-link align-middle px-0" style="background-color: white;">
+                                <i class="fs-4 bi bi-people-fill"></i> <span class="ms-1 d-none d-sm-inline">Danh sách tài khoản</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{% url 'quan_ly_hoa_don' %}" class="nav-link align-middle px-0" style="background-color: white;">
+                                <i class="fs-4 bi bi-file-earmark-text-fill"></i> <span class="ms-1 d-none d-sm-inline">Quản lý hóa đơn</span>
+                            </a>
+                        </li>
+                        <a href="{% url 'login' %}" class="btn btn-primary me-3">
+                            Đăng xuất
+                        </a>
+                    </ul>
+                </div>
+            </div>
+            <!-- Cột bên phải chứa nội dung -->
+            <div class="col py-3">
+                {% block right_content %}{% endblock %}
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

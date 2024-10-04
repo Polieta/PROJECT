@@ -1,0 +1,1 @@
+Tạo phân quyền areas, viết chức năng quản lí nhân viên, quản lí sản phẩm và quản lí hóa đơn.

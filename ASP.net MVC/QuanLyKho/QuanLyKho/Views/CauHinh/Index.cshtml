@@ -1,0 +1,31 @@
+﻿@{
+    ViewBag.Title = "Cấu hình ảnh nền";
+}
+
+<h2>Cấu hình ảnh nền</h2>
+
+@if (ViewBag.ImageFileNames != null && ViewBag.ImageFileNames.Count > 0)
+{
+    <p>Vui lòng chọn ảnh để làm background:</p>
+    <ul>
+        @foreach (var imageName in ViewBag.ImageFileNames)
+        {
+            <li><a href="javascript:void(0);" class="background-selector" data-image="@Url.Content("~/Content/Images/Backgrounds/" + imageName)">@imageName</a></li>
+        }
+    </ul>
+}
+else
+{
+    <p>Không có ảnh nền nào được tìm thấy.</p>
+}
+
+<script>
+    // JavaScript để chọn background khi click vào ảnh
+    $(document).ready(function () {
+        $('.background-selector').on('click', function () {
+            var imageUrl = $(this).data('image');
+            // Thay đổi background của trang
+            $('body').css('background-image', 'url(' + imageUrl + ')');
+        });
+    });
+</script>

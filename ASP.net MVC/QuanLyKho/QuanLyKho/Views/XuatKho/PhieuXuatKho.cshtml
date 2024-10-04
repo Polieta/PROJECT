@@ -1,0 +1,189 @@
+﻿@model QuanLyKho.Models.tblphieuxuatkho
+@{
+    ViewBag.Title = "Phiếu xuất kho";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    /* Đảm bảo form-group được căn giữa */
+    .form-group {
+        margin-bottom: 20px; /* Khoảng cách giữa các form-group */
+        display: flex; /* Sử dụng flexbox để căn các thành phần bên trong */
+        flex-direction: column; /* Căn các thành phần theo chiều dọc */
+    }
+
+        /* Đảm bảo label và input được căn giữa */
+        .form-group label {
+            width: 100%; /* Sử dụng độ rộng đầy đủ của parent container */
+            text-align: left; /* Căn chữ sang phải */
+            margin-bottom: 5px; /* Khoảng cách giữa label và input */
+        }
+
+        .form-group input[type="text"],
+        .form-group select {
+            width: 100%; /* Sử dụng độ rộng đầy đủ của parent container */
+            padding: 8px; /* Padding cho input */
+        }
+
+    .custom-error-message {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 9999;
+        text-align: center;
+        width: 60%; /* Điều chỉnh kích thước thông báo */
+        max-width: 400px; /* Kích thước tối đa */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng shadow */
+    }
+
+    .custom-error-text {
+        font-size: 18px; /* Điều chỉnh kích thước chữ */
+        margin-bottom: 20px; /* Khoảng cách với nút OK */
+    }
+
+    .custom-close-button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+        .custom-close-button:hover {
+            background-color: #c82333;
+        }
+
+    .custom-error-text {
+        background-color: rgba(255, 255, 255, 0); /* Màu nền trong suốt */
+        color: red; /* Màu chữ đỏ */
+    }
+    .btn-custom {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+</style>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 style="text-align:center">Phiếu xuất kho</h2>
+            @using (Html.BeginForm("PhieuXuatKho", "XuatKho", FormMethod.Post, new { id = "addForm", onsubmit = "return validateForm()" }))
+            {
+                @Html.AntiForgeryToken()
+                <hr />
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.ma, "Mã phiếu:", new { @class = "control-label" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.ma, new { id = "ma", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.nguoixuatphieu, "Người xuất phiếu:", new { @class = "control-label" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.nguoixuatphieu, new { id = "nguoixuatphieu", @class = "form-control" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.nguoinhanhang, "Người nhận hàng:", new { @class = "control-label" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.nguoinhanhang, new { id = "nguoinhanhang", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.nguoinhanhang)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.diachi, "Địa chỉ:", new { @class = "control-label" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.diachi, new { id = "diachi", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.diachi)
+                    </div>
+                </div>
+                <div class="form-group">
+                @Html.LabelFor(model => model.idlydoxuat, "Lý do xuất", new { @class = "control-label col-md-3" })
+                <div class="col-md-5">
+                    <select id="lydo" name="idlydoxuat" class="form-control">
+                        <option></option>
+                        <option value="addNew">Thêm mới</option>
+                        @foreach (var item in ViewBag.lydo as SelectList)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+                    <input type="text" id="newReason" name="newReason" class="form-control" style="display: none;" placeholder="Nhập lý do xuất mới">
+                </div>
+                </div>
+                <div class="form-group text-center">
+                    <div class="col-md-offset-2 col-md-9">
+                        <input type="submit" value="Thêm" class="btn-custom" />
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+<div id="custom-error-popup" class="custom-error-message">
+    <p id="custom-error-popup-text" class="custom-error-text">@TempData["ErrorMessage"]</p>
+    <button onclick="closeCustomErrorPopup()" class="custom-close-button">OK</button>
+</div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script>
+    function validateForm() {
+        var maValue = $('#ma').val();
+        var nguoixuatphieuValue = $('#nguoixuatphieu').val();
+        var nguoinhanhangValue = $('#nguoinhanhang').val();
+        var diachiValue = $('#diachi').val();
+        var idlydoxuatValue = $('#idlydoxuat').val();
+        var idkhoValue = $('#idkho').val();
+
+        if (maValue === '' || nguoixuatphieuValue === '' || nguoinhanhangValue === '' || diachiValue === '' || idlydoxuatValue === '' || idkhoValue === '') {
+            $('#custom-error-popup-text').text('Vui lòng điền đầy đủ thông tin!');
+            $('#custom-error-popup').css('display', 'block');
+            return false; // Ngăn form submit nếu có lỗi
+        }
+        return true; // Cho phép submit form nếu không có lỗi
+    }
+
+    function closeCustomErrorPopup() {
+        $('#custom-error-popup').css('display', 'none');
+    }
+</script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.0/js/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#lydo').select2({
+            width: '100%',
+            placeholder: "Nhập lý do xuất",
+            allowClear: true
+        });
+    });
+    $(document).ready(function () {
+        $('#lydo').on('change', function () {
+            if ($(this).val() == 'addNew') {
+                $('#newReason').show();
+                $(this).hide();
+            }
+        });
+    });
+
+</script>

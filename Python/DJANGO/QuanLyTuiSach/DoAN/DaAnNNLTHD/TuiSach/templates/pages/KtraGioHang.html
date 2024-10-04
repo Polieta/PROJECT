@@ -1,0 +1,44 @@
+{% extends "page/layout_home.html" %}
+{% load static %}
+{% block title %}
+{% endblock %}
+{% block GioHang %}
+<div class="container">
+    <h2>Giỏ Hàng</h2>
+    <table class="table w-75">
+        <thead class="thead-dark bg-secondary">
+            <tr>
+                <th scope="col">Mã sản phẩm</th>
+                <th scope="col">Tên sản phẩm</th>
+                <th scope="col">Đơn giá</th>
+                <th scope="col">Số lượng</th>
+                <th scope="col">Thành tiền</th>
+                <th scope="col">Hành động</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item_id, item in gio.items %}
+            <tr class="border">
+                <td>{{ item_id }}</td>
+                <td>{{ item.name }}</td>
+                <td>{{ item.price }} VND</td>
+                <td>
+                    <form method="post" action="{% url 'cap_nhat_gio_hang' item_id %}">
+                        {% csrf_token %}
+                        <input type="number" name="quantity" value="{{ item.quantity }}" min="1" />
+                        <button type="submit" class="btn btn-sm btn-warning">Cập nhật</button>
+                    </form>
+                </td>
+                <td>{{ item.price|floatformat:2|floatformat:"2" }} VND</td>
+                <td>
+                    
+                    <a href="{% url 'xoa_khoi_gio_hang' item_id %}" class="btn btn-sm btn-danger">Xóa</a>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2>Tổng tiền: {{ tong_tien }} VND</h2>
+    <a href="{% url 'thanh_toan' %}" class="btn btn-primary">Thanh toán</a>
+</div>
+{% endblock %}

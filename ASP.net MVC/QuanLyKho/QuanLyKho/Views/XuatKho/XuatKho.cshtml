@@ -1,0 +1,260 @@
+﻿@{
+    ViewBag.Title = "Xuất kho";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Xuất Kho</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        .table-container table {
+            width: 100%; /* Đảm bảo bảng sẽ chiếm toàn bộ chiều rộng của container */
+            max-width: 100%; /* Đảm bảo bảng không vượt quá chiều rộng của container */
+        }
+
+        /* CSS styling */
+        .form-container label {
+            display: block;
+            width: 35%; /* Sử dụng 50% chiều rộng cho label để chúng nằm cạnh nhau */
+            float: left; /* Đẩy label về bên trái */
+            box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước */
+            padding-right: 10px; /* Khoảng cách giữa label và textbox */
+        }
+
+        .form-container input[type="number"],
+        .form-container textarea {
+            width: calc(65% - 10px); /* Sử dụng 50% chiều rộng cho textbox để chúng nằm cạnh nhau */
+            box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước */
+        }
+        /* Căn chỉnh cho hạn sử dụng xuống dòng */
+        .form-container label[for="han-su-dung"],
+        .form-container input[type="date#han-su-dung"] {
+            clear: both;
+            margin-top: 10px;
+        }
+
+        /* Thêm định dạng cho class short-textbox */
+        .short-textbox {
+            width: calc(33.33% - 10px); /* Đặt kích thước mong muốn cho ô textbox số lượng */
+        }
+
+        /* Thêm định dạng cho label hạn sử dụng */
+        .form-container label[for="han-su-dung"] {
+            clear: both; /* Đưa label hạn sử dụng xuống dòng */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-column, .right-column, .form-container, .table-container {
+            border: 1px solid black;
+            padding: 10px; /* Optional: Add padding for better visual appearance */
+            margin-bottom: 20px; /* Optional: Add margin for better spacing */
+        }
+
+        .search-bar {
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea,
+        .table-container input[type="text"],
+        .table-container button {
+            margin-bottom: 5px; /* Optional: Adjust margin between elements */
+            width: 80%; /* Adjust width of input and buttons to fit 3 per row */
+        }
+
+        .form-container textarea {
+            width: calc(100% - 10px); /* Adjust width of textarea to fit 1 per row */
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        /* Flexbox wrap to move inputs to new line */
+        .form-container,
+        .table-container {
+            display: grid;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mobile-left-column">
+            <div class="search-bar">
+                <!-- Thêm ô chọn ngày -->
+                <input type="date" id="ngay-chon" onchange="hienThiPhieuTrongNgay()">
+            </div>
+            <div class="table-container-1">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Mã phiếu</th>
+                            <th>Ngày lập</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+        <div class="mobile-left-column">
+            <!-- Add any specific elements for the left column of the export form, if needed -->
+        </div>
+        <div class="mobile-right-column">
+            <div class="form-container">
+                <label for="ma-phieu">Mã phiếu:</label>
+                <input type="number" id="ma-phieu" placeholder="Mã phiếu">
+                <label for="nguoi-xuat">Người xuất phiếu:</label>
+                <input type="text" id="nguoi-xuat" placeholder="Người xuất phiếu">
+                <label for="nguoi-nhan">Người nhận hàng:</label>
+                <input type="text" id="nguoi-nhan" placeholder="Người nhận hàng">
+                <label for="dia-chi-nhan">Địa chỉ nhận hàng:</label>
+                <input type="text" id="dia-chi-nhan" placeholder="Địa chỉ nhận hàng">
+                <label for="ly-do">Lý do xuất phiếu:</label>
+                <input type="number" id="ly-do" placeholder="Lý do xuất phiếu">
+                <label for="kho">Kho xuất:</label>
+                <div class="col-md-5">
+                    <select id="kho" name="kho" class="form-control">
+                        @foreach (var item in ViewBag.kho as SelectList)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button onclick="moi()">Mới</button>
+                    <button onclick="luu()">Lưu</button>
+                    <button onclick="">Quét mã QR</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tên hàng hóa</th>
+                            <th>Số lô</th>
+                            <th>Số lượng</th>
+                            @*<th>Ngày sản xuất</th>*@
+                            <th>Hạn sử dụng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Table body for displaying exported items -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#kho').select2({
+            allowClear: true // Cho phép xóa lựa chọn
+        });
+    });
+
+    function luu() {
+        var maPhieu = document.getElementById('ma-phieu').value;
+        var nguoiXuat = document.getElementById('nguoi-xuat').value;
+        var nguoiNhan = document.getElementById('nguoi-nhan').value;
+        var diaChiNhan = document.getElementById('dia-chi-nhan').value;
+        var lyDo = document.getElementById('ly-do').value;
+        var kho = document.getElementById('kho').value;
+        if (maPhieu === '' || nguoiXuat === '' || nguoiNhan === '' || diaChiNhan === '' || lyDo === '' || kho === '') {
+            swal("Lỗi", "Vui lòng điền đầy đủ thông tin vào phiếu xuất", "error");
+        } else {
+            if (kiemTraDuLieuTrongBangTam()) {
+                luuDATA();
+            } else {
+                swal("Lỗi", "Vui lòng thêm ít nhất một mặt hàng vào danh sách", "error");
+            }
+        }
+    }
+    function kiemTraDuLieuTrongBangTam() {
+        var tableRows = document.querySelectorAll('.table-container table tbody tr');
+        return tableRows.length > 0;
+    }
+    function luuDATA() {
+        var maPhieu = document.getElementById('ma-phieu').value;
+        var nguoiXuat = document.getElementById('nguoi-xuat').value;
+        var nguoiNhan = document.getElementById('nguoi-nhan').value;
+        var diaChiNhan = document.getElementById('dia-chi-nhan').value;
+        var lyDo = document.getElementById('ly-do').value;
+        var kho = document.getElementById('kho').value;
+        // Gửi dữ liệu bằng AJAX
+        $.ajax({
+            url: '/XuatKho/LuuDuLieu',
+            type: 'POST',
+            data: {
+                maPhieu: maPhieu,
+                nguoiXuat: nguoiXuat,
+                nguoiNhan: nguoiNhan,
+                diaChiNhan: diaChiNhan,
+                lyDo: lyDo,
+                kho: kho
+            },
+            success: function (response) {
+                // Xử lý kết quả từ controller
+                if (response.success) {
+                    swal("Thành công", "Đã tạo thành công phiếu xuất kho", "success");
+                } else {
+                    swal("Lỗi", "Đã xảy ra lỗi khi lưu dữ liệu", "error");
+                }
+            },
+            error: function () {
+                swal("Lỗi", "Đã xảy ra lỗi khi gửi yêu cầu", "error");
+            }
+        });
+    }
+    function xoaNoiDungVaBangPhu() {
+        // Xóa nội dung trong form
+        document.getElementById('ma-phieu').value = '';
+        document.getElementById('nguoi-xuat').value = '';
+        document.getElementById('nguoi-nhan').value = '';
+        document.getElementById('dia-chi-nhan').value = '';
+        $.ajax({
+            url: '/XuatKho/XoaDuLieu', // Đường dẫn đến action XoaDuLieu trong Controller
+            type: 'POST',
+            success: function (response) {
+                localStorage.removeItem('maPhieu');
+                localStorage.removeItem('nguoiNhap');
+                localStorage.removeItem('nguoiGiao');
+                localStorage.removeItem('diaChi');
+                localStorage.removeItem('soThue');
+                localStorage.removeItem('dienGiai');
+                hienThiDuLieuTam();         
+            }
+        });
+    }
+    function moi() {
+        swal({
+            title: "Bạn có muốn tạo mới không?",
+            text: "Dữ liệu hiện tại sẽ bị xóa.",
+            icon: "warning",
+            buttons: ["Không", "Có"],
+            dangerMode: true,
+        })
+        .then((willMoi) => {
+            if (willMoi) {
+                xoaNoiDungVaBangPhu();
+    } else {
+    // Không làm gì nếu người dùng chọn "Không"
+    }
+    });
+    }
+
+</script>

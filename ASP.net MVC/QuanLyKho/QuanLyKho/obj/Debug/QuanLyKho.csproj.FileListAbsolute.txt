@@ -1,0 +1,154 @@
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll.config
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\QuanLyKho.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\EntityFramework.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\Newtonsoft.Json.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\PagedList.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\PagedList.Mvc.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Net.Http.Formatting.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Http.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Http.WebHost.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Razor.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\EntityFramework.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\PagedList.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\PagedList.Mvc.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Razor.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\Newtonsoft.Json.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Net.Http.Formatting.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Http.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\System.Web.Http.WebHost.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\x86\leptonica-1.82.0.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\x86\tesseract50.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\x64\leptonica-1.82.0.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\x64\tesseract50.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\Tesseract.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.Common.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.WebForms.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\x86\leptonica-1.82.0.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\x86\tesseract50.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\x64\leptonica-1.82.0.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\x64\tesseract50.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll.config
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\QuanLyKho.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\EntityFramework.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.Common.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.ProcessingObjectModel.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.WebForms.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\Newtonsoft.Json.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\PagedList.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\PagedList.Mvc.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Net.Http.Formatting.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Http.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Http.WebHost.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Razor.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\Tesseract.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\EntityFramework.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\PagedList.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\PagedList.Mvc.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Razor.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\Newtonsoft.Json.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Net.Http.Formatting.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Http.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\bin\System.Web.Http.WebHost.xml
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csprojResolveAssemblyReference.cache
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.dll
+C:\NQC\HK1(Nam3)(2023-2024)\job\QuanLyKho\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\x86\leptonica-1.82.0.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\x86\tesseract50.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\x64\leptonica-1.82.0.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\x64\tesseract50.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll.config
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\QuanLyKho.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\QuanLyKho.pdb
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\CrystalDecisions.CrystalReports.Design.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\CrystalDecisions.ReportSource.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\CrystalDecisions.Shared.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\CrystalDecisions.VSDesigner.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\CrystalDecisions.Web.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\CrystalDecisions.Windows.Forms.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\EntityFramework.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.Common.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.DataVisualization.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Microsoft.ReportViewer.WebForms.DLL
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Newtonsoft.Json.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\PagedList.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\PagedList.Mvc.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Net.Http.Formatting.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Http.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Http.WebHost.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Razor.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Tesseract.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\CRVsPackageLib.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Microsoft.VisualStudio.TemplateWizardInterface.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\EnvDTE.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\VSLangProj.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\VsWebSite.Interop.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\EnvDTE80.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\AxShockwaveFlashObjects.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Microsoft.Web.Infrastructure.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\stdole.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\ShockwaveFlashObjects.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\EntityFramework.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\EntityFramework.SqlServer.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\PagedList.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\PagedList.Mvc.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Razor.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Deployment.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Webpages.Razor.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Helpers.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Mvc.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Newtonsoft.Json.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Net.Http.Formatting.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Http.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\System.Web.Http.WebHost.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Microsoft.VisualStudio.TemplateWizardInterface.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\EnvDTE.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\VSLangProj.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\EnvDTE80.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\bin\Microsoft.Web.Infrastructure.xml
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.AssemblyReference.cache
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.CoreCompileInputs.cache
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.csproj.Up2Date
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.dll
+C:\NQC\GitHub\ASP.net MVC\QuanLyKho\QuanLyKho\obj\Debug\QuanLyKho.pdb

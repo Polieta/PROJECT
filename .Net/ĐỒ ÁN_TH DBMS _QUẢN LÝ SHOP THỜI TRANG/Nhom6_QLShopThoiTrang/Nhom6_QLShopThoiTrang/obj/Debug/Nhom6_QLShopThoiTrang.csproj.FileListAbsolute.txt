@@ -1,0 +1,116 @@
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormMain.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormNhanVien.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.GenerateResource.cache
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe.config
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.pdb
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Properties.Resources.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.CoreCompileInputs.cache
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.exe
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.pdb
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.AssemblyReference.cache
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormDoanhThu.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormHoaDon.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormKhachHang.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormNhanVien.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormSanPham.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormTrangChu.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\System.Drawing.Common.dll
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.dll
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.xml
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.CopyComplete
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormProfile.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormQLHoaDon.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormAdmin.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormEmployee.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormDangNhap.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe.config
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.pdb
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\System.Drawing.Common.dll
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.dll
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.xml
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.AssemblyReference.cache
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormAdmin.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormDangNhap.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormEmployee.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormMain.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormNhanVien.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormDoanhThu.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormHoaDon.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormKhachHang.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormNhanVien.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormProfile.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormQLHoaDon.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormSanPham.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormTrangChu.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Properties.Resources.resources
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.GenerateResource.cache
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.CoreCompileInputs.cache
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.CopyComplete
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.exe
+D:\HỌC PHẦN (HK5)\CongNghe_Net\Đồ Án\Hào\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.pdb
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.AssemblyReference.cache
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormAdmin.resources
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormDangNhap.resources
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormNhanVien.resources
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormDoanhThu.resources
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormHoaDon.resources
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormKhachHang.resources
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormQLHoaDon.resources
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormSanPham.resources
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Properties.Resources.resources
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.GenerateResource.cache
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.CoreCompileInputs.cache
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.exe
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.pdb
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe.config
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.pdb
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\System.Drawing.Common.dll
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.dll
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.xml
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.CopyComplete
+C:\Users\NguyenVanPhu\Downloads\Compressed\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Guna.UI2.dll
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe.config
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.pdb
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\System.Drawing.Common.dll
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.dll
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.xml
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.AssemblyReference.cache
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormAdmin.resources
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormDangNhap.resources
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormNhanVien.resources
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormDoanhThu.resources
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormHoaDon.resources
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormKhachHang.resources
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormQLHoaDon.resources
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormSanPham.resources
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Properties.Resources.resources
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.GenerateResource.cache
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.CoreCompileInputs.cache
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.CopyComplete
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.exe
+D:\HK5\TH DBMS\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe.config
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.exe
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\Nhom6_QLShopThoiTrang.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\System.Drawing.Common.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.dll
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\bin\Debug\ZedGraph.xml
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.AssemblyReference.cache
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormAdmin.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormDangNhap.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.FormNhanVien.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormDoanhThu.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormHoaDon.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormKhachHang.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormQLHoaDon.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Forms.FormSanPham.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.Properties.Resources.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.GenerateResource.cache
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.csproj.CoreCompileInputs.cache
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QL.65AD8E2C.Up2Date
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.exe
+C:\NQC\HK1(Nam3)(2023-2024)\Thực hành hệ quản trị cơ sở dữ liệu\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\ĐỒ ÁN_TH DBMS _QUẢN LÝ SHOP THỜI TRANG\Nhom6_QLShopThoiTrang\Nhom6_QLShopThoiTrang\obj\Debug\Nhom6_QLShopThoiTrang.pdb

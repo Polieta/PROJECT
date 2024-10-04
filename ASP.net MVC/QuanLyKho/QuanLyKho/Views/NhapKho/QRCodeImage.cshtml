@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Hình ảnh QR Code</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .qr-code-container {
+            width: 80vw; /* Điều chỉnh kích thước theo chiều ngang của cửa sổ */
+            max-width: 400px; /* Điều chỉnh kích thước tối đa của container */
+            text-align: center; /* Canh giữa nội dung */
+            margin-bottom: 20px; /* Khoảng cách giữa ảnh và nút "Trở lại" */
+        }
+
+            .qr-code-container img {
+                width: 100%;
+                height: auto;
+            }
+
+        .back-link {
+            margin-top: 20px;
+            text-align: center; /* Canh giữa nút "Trở lại" */
+            font-size: 70px;
+        }
+    </style>
+</head>
+<body>
+    <div class="qr-code-container">
+        <img src="data:image/png;base64,@Convert.ToBase64String(Model)" alt="QR Code" />
+    </div>
+    <div class="back-link">
+        @Html.ActionLink("Trở lại", "TEM", "NhapKho")
+    </div>
+</body>
+</html>

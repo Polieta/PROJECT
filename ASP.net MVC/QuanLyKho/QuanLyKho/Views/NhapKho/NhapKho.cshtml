@@ -1,0 +1,665 @@
+﻿@{
+    ViewBag.Title = "Nhập kho";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Nhập Kho</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <style>
+        /* CSS styling */
+        .form-container label {
+            width: 35%; /* Sử dụng 50% chiều rộng cho label để chúng nằm cạnh nhau */
+            float: left; /* Đẩy label về bên trái */
+            box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước */
+            padding-right: 10px; /* Khoảng cách giữa label và textbox */
+        }
+        .form-container input[type="number"],
+        .form-container textarea {
+            width: calc(65% - 10px); /* Sử dụng 50% chiều rộng cho textbox để chúng nằm cạnh nhau */
+            box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi kích thước */
+        }
+            /* Căn chỉnh cho hạn sử dụng xuống dòng */
+            .form-container label[for="han-su-dung"],
+            .form-container input[type="date#han-su-dung"] {
+                clear: both;
+                margin-top: 10px;
+            }
+
+        /* Thêm định dạng cho class short-textbox */
+        .short-textbox {
+            width: 100%; /* Đặt kích thước mong muốn cho ô textbox số lượng */
+        }
+
+        /* Thêm định dạng cho label hạn sử dụng */
+        .form-container label[for="han-su-dung"] {
+            clear: both; /* Đưa label hạn sử dụng xuống dòng */
+        }
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .left-column, .right-column, .form-container, .table-container {
+            border: 1px solid black;
+            padding: 10px; /* Optional: Add padding for better visual appearance */
+            margin-bottom: 20px; /* Optional: Add margin for better spacing */
+        }
+
+        .left-column {
+            flex: 0 0 20%; /* Set width of left column to 30% */
+        }
+
+        .right-column {
+            flex: 0 0 80%; /* Set width of right column to 70% */
+        }
+
+        .search-bar {
+            margin-bottom: 10px;
+        }
+
+        .button-container {
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="text"],
+        .form-container textarea,
+        .table-container input[type="text"],
+        .table-container button {
+            margin-bottom: 5px; /* Optional: Adjust margin between elements */
+            width: 80%; /* Adjust width of input and buttons to fit 3 per row */
+        }
+
+        .table-container {
+            width: 100%;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        /* Flexbox wrap to move inputs to new line */
+        .form-container,
+        .table-container {
+            display: grid;
+            flex-wrap: wrap;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-column">
+            <div class="search-bar">
+                <!-- Thêm ô chọn ngày -->
+                <input type="date" id="ngay-chon" onchange="hienThiPhieuTrongNgay()">
+            </div>
+            <div class="table-container-1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mã phiếu</th>
+                                <th>Ngày lập</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+            </div>
+        </div>
+        <div class="right-column">
+            <div class="form-container">
+                <label for="ma-phieu">Mã phiếu:</label>
+                <input type="number" id="ma-phieu" placeholder="Mã phiếu">
+                <label for="nguoi-nha">Người nhập phiếu:</label>
+                <input type="text" id="nguoi-nhap" placeholder="Người nhập phiếu">
+                <label for="nguoi-giao">Người giao hàng:</label>
+                <input type="text" id="nguoi-giao" placeholder="Người giao hàng">
+                <label for="dia-chi">Địa chỉ:</label>
+                <input type="text" id="dia-chi" placeholder="Địa chỉ">
+                <label for="so-thue">Số thuế:</label>
+                <input type="text" id="so-thue" placeholder="Số thuế">
+                <label for="dien-giai">Diễn giải:</label>
+                <textarea id="dien-giai" placeholder="Diễn giải"></textarea>
+                <label for="kho">Kho:</label>
+                <div class="col-md-5">
+                    <select id="kho" name="kho" class="form-control">
+                        @foreach (var item in ViewBag.kho as SelectList)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button onclick="moi()">Mới</button>
+                    <button onclick="luu()">Lưu</button>
+                </div>
+            </div>
+            <div class="form-container">
+                <label for="ma-hang-hoa">Mã hàng hóa:</label>
+                <div class="col-md-5">
+                    <select id="ma-hang-hoa" class="form-control" onchange="timTenHangHoa()">
+                        <option></option>
+                        @foreach (var item in ViewBag.hanghoa as SelectList)
+                        {
+                            <option value="@item.Value">@item.Text</option>
+                        }
+                    </select>
+
+                </div>
+                <label for="ten-hang-hoa">Tên hàng hóa:</label>
+                <input type="text" id="ten-hang-hoa" placeholder="Tên hàng hóa" disabled>
+                <label for="so-lo">Số lô:</label>
+                <input type="number" id="so-lo" placeholder="Số lô">
+                <label for="so-luong">Số lượng:</label>
+                <input type="number" id="so-luong" placeholder="Số lượng" min="1" value="1">
+                <label for="ngay-san-xuat">Ngày sản xuất:</label>
+                <input type="date" id="ngay-san-xuat" placeholder="Ngày sản xuất">
+                <!-- Sử dụng clear: both để đưa label hạn sử dụng xuống dòng -->
+                <label for="han-su-dung" style="clear: both;">Hạn sử dụng:</label>
+                <input type="date" id="han-su-dung" placeholder="Hạn sử dụng">
+                <button onclick="them()">Thêm</button>
+                <button onclick="xoaDuLieu()">Xóa dữ liệu</button>
+                @*<form id="form-scan-text">
+                    <button type="submit">Quét thông tin</button>
+                </form>*@
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tên hàng hóa</th>
+                            <th>Số lô</th>
+                            <th>Số lượng</th>
+                            <th>Ngày sản xuất</th>
+                            <th>Hạn sử dụng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Dữ liệu sẽ được thêm vào đây từ bảng tạm -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+  </body>
+</html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#kho').select2({
+                allowClear: true // Cho phép xóa lựa chọn
+            });
+        });
+        $(document).ready(function() {
+            $('#ma-hang-hoa').select2({
+                allowClear: true // Cho phép xóa lựa chọn
+            });
+        });
+        function them() {
+            var maPhieu = document.getElementById('ma-phieu').value;
+            var nguoiNhap = document.getElementById('nguoi-nhap').value;
+            var nguoiGiao = document.getElementById('nguoi-giao').value;
+            var diaChi = document.getElementById('dia-chi').value;
+            var soThue = document.getElementById('so-thue').value;
+            var dienGiai = document.getElementById('dien-giai').value;
+
+            var maHangHoa = document.getElementById('ma-hang-hoa').value.trim();
+            var soLo = document.getElementById('so-lo').value.trim();
+            var soLuong = parseInt(document.getElementById('so-luong').value); // Chuyển đổi sang kiểu integer
+            var ngaySanXuat = document.getElementById('ngay-san-xuat').value;
+            var hanSuDung = document.getElementById('han-su-dung').value;
+            var kho = document.getElementById('kho').value;
+            if (maPhieu === '' || nguoiNhap === '' || nguoiGiao === '' || diaChi === '' || soThue === '' || dienGiai === '' || maHangHoa === '' || soLo === '' || soLuong === '' || kho === '') {
+                // Hiển thị cảnh báo nếu một trường nào đó không được điền đầy đủ
+                swal("Lỗi", "Vui lòng điền đầy đủ thông tin", "error");
+            } else {
+                var matHang = {
+                    maPhieu: maPhieu.trim(),
+                    maHangHoa: maHangHoa.trim(),
+                    soLo: soLo.trim(),
+                    soLuong: soLuong,
+                    ngaySanXuat: ngaySanXuat,
+                    hanSuDung: hanSuDung
+                };
+                $.ajax({
+                    url: '/NhapKho/LuuDuLieuTam',
+                    type: 'POST',
+                    data: {
+                        maphieu: matHang.maPhieu,
+                        mahang: matHang.maHangHoa,
+                        solo: matHang.soLo,
+                        soluong: matHang.soLuong,
+                        nsx: matHang.ngaySanXuat,
+                        hsd: matHang.hanSuDung
+                    },
+                    success: function (response) {
+                        // Xử lý kết quả từ controller
+                        if (response.success) {
+                            hienThiDuLieuTam();
+                            IN_QR(maHangHoa,soLo,ngaySanXuat,hanSuDung);
+                            swal("Thành công", "Dữ liệu đã được thêm", "success");
+                        } else {
+                            swal("Lỗi", "Đã xảy ra lỗi khi lưu dữ liệu", "error");
+                        }
+                    },
+                    error: function () {
+                        swal("Lỗi", "Đã xảy ra lỗi khi gửi yêu cầu", "error");
+                    }
+                });
+            }
+        }
+        
+        function IN_QR(maHangHoa,soLo, nSx, hSd){
+            $.ajax({
+                url: '/NhapKho/InTem',
+                type: 'POST',
+                data: {
+                    maHangHoa: maHangHoa,
+                    soLo: soLo,
+                    nSx: nSx,
+                    hSd: hSd
+                },
+                success: function (response) {
+                    if (response.success) {
+                        swal("Loading....", "Tiến hàng in QR", "success")
+                        .then(function () {
+                            // Thực hiện chuyển hướng sau khi nhấn nút OK trong thông báo
+                            window.location.href = '/ViewReport.aspx';
+                        });
+                    } else {
+                        swal("Lỗi", "TESTING", "error");
+                    }
+                },
+                error: function () {
+                    swal("Lỗi", "Lỗi IN QR", "error");
+                }
+            });
+        }
+
+        function xoaDuLieu() {
+            document.getElementById('so-lo').value = ''; // Xóa giá trị của input số lô
+            document.getElementById('so-luong').value = '1'; // Đặt lại giá trị mặc định của số lượng là 1
+            document.getElementById('ngay-san-xuat').value = ''; // Xóa giá trị của input ngày sản xuất
+            document.getElementById('han-su-dung').value = ''; // Xóa giá trị của input hạn sử dụng
+        }
+        function luu() {
+            var maPhieu = document.getElementById('ma-phieu').value;
+            var nguoiNhap = document.getElementById('nguoi-nhap').value;
+            var nguoiGiao = document.getElementById('nguoi-giao').value;
+            var diaChi = document.getElementById('dia-chi').value;
+            var soThue = document.getElementById('so-thue').value;
+            var dienGiai = document.getElementById('dien-giai').value;
+            var kho = document.getElementById('kho').value;
+    
+            if (maPhieu === '' || nguoiNhap === '' || nguoiGiao === '' || diaChi === '' || soThue === '' || dienGiai === '' || kho === '') {
+                swal("Lỗi", "Vui lòng điền đầy đủ thông tin vào phiếu nhập", "error");
+            } else {
+                if (kiemTraDuLieuTrongBangTam()) {
+                    luuDATA();
+                } else {
+                    swal("Lỗi", "Vui lòng thêm ít nhất một mặt hàng vào bảng tạm", "error");
+                }
+            }
+        }
+        function kiemTraDuLieuTrongBangTam() {
+            var tableRows = document.querySelectorAll('.table-container table tbody tr');
+            return tableRows.length > 0;
+        }
+        function luuDATA() {
+            var maPhieu = document.getElementById('ma-phieu').value;
+            var nguoiNhap = document.getElementById('nguoi-nhap').value;
+            var nguoiGiao = document.getElementById('nguoi-giao').value;
+            var diaChi = document.getElementById('dia-chi').value;
+            var soThue = document.getElementById('so-thue').value;
+            var dienGiai = document.getElementById('dien-giai').value;
+            var kho = document.getElementById('kho').value;
+            // Gửi dữ liệu bằng AJAX
+            $.ajax({
+                url: '/NhapKho/LuuDuLieu',
+                type: 'POST',
+                data: {
+                    maPhieu: maPhieu,
+                    nguoiNhap: nguoiNhap,
+                    nguoiGiao: nguoiGiao,
+                    diaChi: diaChi,
+                    soThue: soThue,
+                    dienGiai: dienGiai,
+                    kho: kho
+                },
+                success: function (response) {
+                    // Xử lý kết quả từ controller
+                    if (response.success) {
+                        swal("Thành công", "Đã tạo thành công phiếu nhập kho", "success");
+                        hienThiPhieuTrongNgay();
+                    } else {
+                        swal("Lỗi", "Đã xảy ra lỗi khi lưu dữ liệu", "error");
+                    }
+                },
+                error: function () {
+                    swal("Lỗi", "Đã xảy ra lỗi khi gửi yêu cầu", "error");
+                }
+            });
+        }
+        function xoaNoiDungVaBangPhu() {
+            // Xóa nội dung trong form
+            document.getElementById('ma-phieu').value = '';
+            document.getElementById('nguoi-nhap').value = '';
+            document.getElementById('nguoi-giao').value = '';
+            document.getElementById('dia-chi').value = '';
+            document.getElementById('so-thue').value = '';
+            document.getElementById('dien-giai').value = '';
+            $.ajax({
+                url: '/NhapKho/XoaDuLieu', // Đường dẫn đến action XoaDuLieu trong Controller
+                type: 'POST',
+                success: function (response) {
+                    xoaDuLieu();
+                    hienThiDuLieuTam();
+                }        
+            });
+        }
+        function moi() {
+            swal({
+                title: "Bạn có muốn tạo mới không?",
+                text: "Dữ liệu hiện tại sẽ bị xóa.",
+                icon: "warning",
+                buttons: ["Không", "Có"],
+                dangerMode: true,
+            })
+            .then((willMoi) => {
+                if (willMoi) {
+                    xoaNoiDungVaBangPhu();
+        } else {
+        // Không làm gì nếu người dùng chọn "Không"
+        }
+        });
+        }
+
+        function suaMatHang(button) {
+            var row = button.parentNode.parentNode;
+            var cells = row.getElementsByTagName("td");
+            // Hiển thị input cho phép người dùng chỉnh sửa
+            for (var i = 2; i < cells.length - 1; i++) {
+                var oldValue = cells[i].innerText;
+                var input = document.createElement("input");
+                input.type = "text";
+                input.value = oldValue;
+                cells[i].innerText = "";
+                cells[i].appendChild(input);
+            }
+            // Hiển thị nút "Lưu"
+            var luuButton = row.querySelector("button:nth-of-type(3)");
+            luuButton.style.display = "inline-block";
+        }
+
+        function luuSua(button) {
+            var row = button.parentNode.parentNode;
+            var cells = row.getElementsByTagName("td");
+            var maHangHoa = cells[0].innerText.trim();
+            var soLo = cells[1].innerText.trim();
+            var soLuong = cells[2].querySelector("input") ? cells[2].querySelector("input").value : null;
+            var ngaySanXuatInput = cells[3].querySelector("input");
+            var hanSuDungInput = cells[4].querySelector("input");
+            var ngaySanXuat, hanSuDung;
+
+            if (ngaySanXuatInput) {
+                ngaySanXuat = ngaySanXuatInput.value;
+            } else {
+                ngaySanXuat = null;
+            }
+
+            if (hanSuDungInput) {
+                hanSuDung = hanSuDungInput.value;
+            } else {
+                hanSuDung = null;
+            }
+
+            $.ajax({
+                url: '/NhapKho/LuuSuaMatHang',
+                type: 'POST',
+                data: { maHangHoa: maHangHoa, soLo: soLo, soLuong: soLuong, ngaySanXuat: ngaySanXuat, hanSuDung: hanSuDung },
+                success: function (response) {
+                    if (response.success) {
+                        // Cập nhật các ô trong hàng với dữ liệu mới (nếu cần)
+                        button.style.display = "none"; // Ẩn nút "Lưu"
+                        hienThiDuLieuTam();
+                        swal("Thành công", "Dữ liệu đã được cập nhật", "success");
+                    } else {
+                        swal("Lỗi", "Đã xảy ra lỗi khi lưu sửa dữ liệu", "error");
+                    }
+                },
+                error: function () {
+                    swal("Lỗi", "Đã xảy ra lỗi khi gửi yêu cầu lưu sửa", "error");
+                }
+            });
+        }
+        // Sử dụng DatePicker cho ô ngày sản xuất và hạn sử dụng
+        
+
+        function xoaMatHang(button) {
+            var row = button.parentNode.parentNode;
+            var maHangHoa = row.getElementsByTagName("td")[0].innerText; // Xác định mã hàng hóa hoặc thông tin duy nhất để xóa
+            var soLo = row.getElementsByTagName("td")[1].innerText;
+            $.ajax({
+                url: '/NhapKho/XoaMatHang', // Đường dẫn đến action trong controller để xử lý yêu cầu xóa
+                type: 'POST',
+                data: {
+                    maHangHoa: maHangHoa,
+                    soLo: soLo
+                }, // Dữ liệu cần để xác định dòng cụ thể cần xóa
+                success: function (response) {
+                    if (response.success) {
+                        row.remove(); // Xóa dòng trong bảng trên giao diện sau khi xóa thành công
+                        swal("Thành công", "Dữ liệu đã được xóa", "success");
+                        hienThiDuLieuTam();
+                    } else {
+                        swal("Lỗi", "Đã xảy ra lỗi khi xóa dữ liệu", "error");
+                    }
+                },
+                error: function () {
+                    swal("Lỗi", "Đã xảy ra lỗi khi gửi yêu cầu", "error");
+                }
+            });
+        }
+        function hienThiDuLieuTam() {
+            $.ajax({
+                url: '/NhapKho/LayDuLieuTam', // Đường dẫn đến action trong controller để lấy dữ liệu từ bảng tạm
+                type: 'GET',
+                success: function (response) {
+                    // Xóa tất cả các hàng trong tbody
+                    $('.table-container table tbody').empty();
+                    // Thêm dữ liệu từ response vào bảng HTML
+                    response.forEach(function (item) {
+                        var row = '<tr>' +
+                                    '<td>' + item.tenHangHoa + '</td>' +
+                                    '<td>' + item.soLo + '</td>' +
+                                    '<td>' + item.soLuong + '</td>' +
+                                    '<td>' + item.ngaySanXuat + '</td>' +
+                                    '<td>' + item.hanSuDung + '</td>' +
+                                    '<td>' +
+                                        '<button onclick="suaMatHang(this)">Sửa</button>'+
+                                        '<button onclick="xoaMatHang(this)">Xóa</button>'+
+                                        '<button style="display: none;" onclick="luuSua(this)">Lưu</button>' +
+                                    '</td>'
+                        '</tr>';
+                        $('.table-container table tbody').append(row);
+                    });
+                },
+                error: function () {
+                    console.log('Đã xảy ra lỗi khi lấy dữ liệu từ bảng tạm');
+                }
+            });
+        }
+        function hienThiPhieuTrongNgay() {
+            var ngay = document.getElementById('ngay-chon').value;
+            $.ajax({
+                url: '/NhapKho/Index',
+                type: 'GET',
+                data: { ngay: ngay },
+                success: function(response) {
+                    var tableBody = $('.table-container-1 table tbody');
+                    tableBody.empty();
+                    if (response.DanhSachPhieu.length > 0) {
+                        var tongSoPhieuRow = '<tr><td colspan="3">Tổng số phiếu: ' + response.TongSoPhieu + '</td></tr>';
+                        tableBody.append(tongSoPhieuRow);
+                        response.DanhSachPhieu.forEach(function (item) {
+                            var row = '<tr>' +
+                                        '<td>' + item.MaPhieu + '</td>' +
+                                        '<td>' + item.NgayLap + '</td>' +
+                                        '<td>' +
+                                            '<button onclick="xemPhieu(\'' + item.IDPhieu + '\')">Xem</button>' +
+                                            '<button onclick="inExcel(\'' + item.IDPhieu + '\')">In Excel</button>' +
+                                        '</td>' +
+                                      '</tr>';
+                            tableBody.append(row);
+                        });
+                    } else {
+                        tableBody.html('<tr><td colspan="3">Không có phiếu nào được tìm thấy.</td></tr>');
+                    }
+                },
+                error: function() {
+                    console.log('Đã xảy ra lỗi khi lấy dữ liệu phiếu');
+                }
+            });
+        }
+        function xoa() {
+            $.ajax({
+                url: '/NhapKho/XoaDuLieu', // Đường dẫn đến action XoaDuLieu trong Controller
+                type: 'POST',
+                success: function (response) {       
+                }
+            });
+        }
+        function xemPhieu(IDPhieu) {
+            if (IDPhieu !== '') {
+                $.ajax({
+                    url: '/NhapKho/XemPhieu', // Đường dẫn đến action trong controller để xem phiếu
+                    type: 'GET',
+                    data: { IDPhieu: IDPhieu },
+                    success: function (response) {
+                        // Xử lý kết quả từ controller
+                        if (response.success) {
+                            // Cập nhật giao diện với dữ liệu từ phiếu được chọn
+                            var phieu = response.phieuNhapKho;
+                            var chiTietPhieu = response.chiTietPhieu;
+                            document.getElementById('ma-phieu').value = phieu.ma;
+                            document.getElementById('nguoi-nhap').value = phieu.nguoinhapphieu;
+                            document.getElementById('nguoi-giao').value = phieu.nguoigiaohang;
+                            document.getElementById('dia-chi').value = phieu.diachi;
+                            document.getElementById('so-thue').value = phieu.masothue;
+                            document.getElementById('dien-giai').value = phieu.diengiai;
+                            document.getElementById('kho').value = phieu.idkho;
+                            xoa();
+                            hienThiDuLieuXemLai(IDPhieu);
+
+                        } else {
+                            swal("Lỗi", "Không tìm thấy thông tin cho mã phiếu này", "error");
+                        }
+                    },
+                    error: function () {
+                        swal("Lỗi", "Đã xảy ra lỗi khi gửi yêu cầu", "error");
+                    }
+                });
+            }
+        }
+        function hienThiDuLieuXemLai(IDPhieu) {
+            $.ajax({
+                url: '/NhapKho/XemDuLieuBang',
+                type: 'GET',
+                data: { IDPhieu: IDPhieu },
+                success: function (response) {
+                    // Xóa tất cả các hàng trong tbody
+                    $('.table-container table tbody').empty();
+                    // Duyệt qua từng item trong response
+                    response.forEach(function (item) {
+                        // Lưu dữ liệu vào bảng tạm
+                        $.ajax({
+                            url: '/NhapKho/LuuDuLieuTam',
+                            type: 'POST',
+                            data: {
+                                maphieu: item.maPhieu,
+                                mahang: item.maHangHoa,
+                                solo: item.soLo,
+                                soluong: item.soLuong,
+                                nsx: item.ngaySanXuat,
+                                hsd: item.hanSuDung
+                            },
+                            success: function (response) {
+                                // Kiểm tra kết quả từ controller
+                                if (response.success) {
+                                    // Thêm dữ liệu vào bảng tạm thành công, sau đó hiển thị dữ liệu tạm
+                                    hienThiDuLieuTam();
+                                } else {
+                                }
+                            },
+                        });
+                    });
+                },
+                error: function () {
+                    console.log('Đã xảy ra lỗi khi lấy dữ liệu từ bảng tạm');
+                }
+            });
+        }
+        function inExcel(IDPhieu) {
+            $.ajax({
+                url: '/NhapKho/InExcel',
+                type: 'GET',
+                data: { IDPhieu: IDPhieu },
+                success: function (response) {
+                    // Tạo một blob từ dữ liệu trả về
+                    var blob = new Blob([response], { type: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet' });
+
+                    // Tạo một URL tạm thời cho blob
+                    var url = window.URL.createObjectURL(blob);
+
+                    // Tạo một thẻ a để tải file Excel
+                    var a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'PhieuNhapKho.xlsx';
+                    document.body.appendChild(a);
+                    a.click();
+                    window.URL.revokeObjectURL(url);
+                    document.body.removeChild(a);
+                },
+                error: function () {
+                    swal("Lỗi", "Đã xảy ra lỗi in thành file excel", "error");
+                }
+            });
+        }
+
+        function timTenHangHoa() {
+            var maHangHoa = document.getElementById('ma-hang-hoa').value;
+            if (maHangHoa !== '') {
+                $.ajax({
+                    url: '/NhapKho/TimTenHangHoa',
+                    type: 'GET',
+                    data: { maHangHoa: maHangHoa },
+                    success: function (response) {
+                        // Kiểm tra xem phản hồi có thành công không
+                        if (response.success) {
+                            // Hiển thị tên hàng hóa lên trường tên hàng hóa
+                            document.getElementById('ten-hang-hoa').value = response.tenHangHoa;
+                        }
+                    },
+                    error: function () {
+                        swal("Lỗi", "Đã xảy ra lỗi select", "error");
+                    }
+                });
+            } else {
+                // Xử lý khi trường mã hàng hóa rỗng
+                swal("Lỗi", "Vui lòng nhập mã hàng hóa", "error");
+            }
+        }
+        $(document).ready(function () {
+            xoaNoiDungVaBangPhu();
+        });
+    </script>

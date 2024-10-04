@@ -1,0 +1,1 @@
+Vẽ mô hình Use-case, Vẽ mô hình phân tích nghiệp vụ (Business Process Model - BPM), code  (dịch vụ thanh toán, hóa đơn thanh toán, báo cáo doanh thu, quản lí hóa đơn).

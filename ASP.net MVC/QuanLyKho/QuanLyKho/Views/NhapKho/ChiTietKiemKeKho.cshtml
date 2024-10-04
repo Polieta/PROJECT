@@ -1,0 +1,61 @@
+﻿@model QuanLyKho.Models.tblkiemkeCTkho
+@{
+    ViewBag.Title = "Chi tiết kiểm kê";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+@using (Html.BeginForm("ChiTietKiemKeKho", "NhapKho", FormMethod.Post, new { id = "addForm" }))
+{
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h4 class="text-center">Thông tin chi tiết</h4>
+                <hr />
+                <div class="form-group">
+                    @Html.LabelFor(model => model.mahang, "Mã hàng hóa", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.mahang, new { @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.mahang)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.solo, "Lô", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.solo, new { @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.solo)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.nsx, "Ngày sản xuất", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.nsx, new { @readonly = "readonly", type = "datetime" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HSD, "Hạn sử dụng", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.HSD, new { @readonly = "readonly", type = "datetime" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.loaihang, "Loại hàng", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.loaihang, new { @readonly = "readonly" })
+                        @Html.ValidationMessageFor(model => model.loaihang)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.sl, "Số lượng", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.TextBoxFor(model => model.sl, new { @class = "form-control", type = "number" })
+                        @Html.ValidationMessageFor(model => model.sl)
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <div>
+                        <input type="submit" value="Xác nhận" class="btn btn-primary" style="border: 1px solid #ccc; padding: 8px 15px;" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}

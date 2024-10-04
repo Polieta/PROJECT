@@ -1,0 +1,110 @@
+﻿@model QuanLyKho.Models.tblkho
+@{
+    ViewBag.Title = "Sửa thông tin kho";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    /* CSS để label và textbox nằm ngang và gần nhau */
+    .form-horizontal .form-group {
+        text-align: center; /* Canh giữa trên màn hình */
+        margin-bottom: 15px;
+    }
+
+    .btn-custom {
+        border: 1px solid #ccc;
+        padding: 8px 15px;
+        background-color: #007bff;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+        cursor: pointer; /* Thêm hiệu ứng con trỏ khi di chuột vào button */
+    }
+
+    .form-horizontal .control-label {
+        text-align: right;
+        width: auto; /* Để label tự điều chỉnh chiều rộng */
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 5px;
+        margin-right: 10px; /* Khoảng cách giữa label và textbox */
+    }
+
+    .form-horizontal .col-md-10 {
+        width: auto; /* Để textbox tự điều chỉnh chiều rộng */
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .form-horizontal input[type="text"] {
+        max-width: 200px; /* Giảm độ rộng tối đa của textbox */
+        width: 100%; /* Để textbox mở rộng theo chiều ngang */
+    }
+    .custom-error-text {
+        background-color: rgba(255, 255, 255, 0); /* Màu nền trong suốt */
+        color: red; /* Màu chữ đỏ */
+    }
+</style>
+<h2 style="text-align:center">Sửa thông tin kho</h2>
+@using (Html.BeginForm("Sua_Kho", "TienIch", FormMethod.Post, new { id = "addForm", onsubmit = "return validateForm()" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="form-horizontal" style="text-align:center">
+        <hr />
+        @Html.ValidationSummary(true)
+        @Html.HiddenFor(model => model.id)
+        <div class="form-group">
+            @Html.LabelFor(model => model.ma, "Mã kho", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.ma, new { @readonly = "readonly" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.ten, "Tên kho", new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ten, new { id = "ten", @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ten)
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Lưu" class="btn btn-custom" style="border: 1px solid #ccc; padding: 8px 15px;" />
+            </div>
+        </div>
+    </div>
+}
+<div style="text-align:center">
+    @Html.ActionLink("Trở lại", "Kho", "TienIch")
+</div>
+<div id="custom-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border: 1px solid #ccc; z-index: 9999; text-align: center;">
+    <p id="custom-popup-text" class="custom-error-text" style="font-size: 18px; margin-bottom: 20px;"></p>
+    <button onclick="closeCustomPopup()" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; font-size: 16px; border-radius: 4px; transition: background-color 0.3s;">OK</button>
+</div>
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var errorMessage = '@TempData["ErrorMessage"]';
+        if (errorMessage !== '') {
+            document.getElementById("custom-popup-text").innerHTML = errorMessage;
+            document.getElementById("custom-popup").style.display = "block";
+        }
+    });
+
+    function closeCustomPopup() {
+        document.getElementById("custom-popup").style.display = "none";
+    }
+
+    function validateForm() {
+        var tenValue = document.getElementById("ten").value;
+        if (tenValue.trim() === '') {
+            document.getElementById("custom-popup-text").innerHTML = "Vui lòng điền đầy đủ thông tin";
+            document.getElementById("custom-popup").style.display = "block";
+            return false; // Ngăn không cho form submit nếu có trường trống
+        }
+        return true; // Cho phép submit nếu tất cả các trường đã được điền đầy đủ
+    }
+
+</script>

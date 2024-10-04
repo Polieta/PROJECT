@@ -1,0 +1,112 @@
+﻿@*@using PagedList.Mvc;
+@using PagedList;*@
+@model IEnumerable<QuanLyKho.Models.tbltonkhoct>
+@{
+    ViewBag.Title = "Phiếu xuất kho";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    .table-custom {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+        .table-custom th,
+        .table-custom td {
+            border: 1px solid #ddd; /* Định dạng viền */
+            padding: 8px;
+            text-align: left;
+        }
+
+        .table-custom th {
+            background-color: #f2f2f2; /* Màu nền cho tiêu đề cột */
+        }
+
+        .table-custom tr:nth-child(even) {
+            background-color: #f2f2f2; /* Màu nền cho hàng chẵn */
+        }
+
+        .table-custom tr:nth-child(odd) {
+            background-color: #ffffff; /* Màu nền cho hàng lẻ */
+        }
+
+</style>
+@using (Html.BeginForm("PhieuXuatKhoCT", "XuatKho", FormMethod.Post))
+{
+    <h3>DANH SÁCH HÀNG HÓA</h3>
+    <button type="button" id="btnTimKiem">Tìm kiếm</button><input placeholder="Tìm theo mã" type="text" id="ma" class="textbox" style="width: 150px;height: 30px;border: 1px solid #000;border-radius: 5px;padding: 10px;">
+    <table class="table-custom">
+        <tr>
+            <th>
+                Tên hàng hóa
+            </th>
+            <th>
+                Số lô
+            </th>
+            <th>
+                Hạn sử dụng
+            </th>
+            <th>
+                SL Trong kho
+            </th>
+            <th>
+                Số lượng
+            </th>
+            <th>
+                Lựa chọn
+            </th>
+        </tr>
+        @foreach (var item in Model)
+        {
+            var slTrongKho = (item.tondau ?? 0) + (item.sln ?? 0) - (item.slx ?? 0);
+            <tr>
+                <td>
+                    @ViewBag.TenHangHoaDict[item.mahanghoa] <!-- Hiển thị tên hàng hóa thay vì mã hàng -->
+                    @Html.Hidden("mahanghoa_" + item.id, item.mahanghoa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.solo)
+                </td>
+                <td>
+                    @item.hsd.ToString("dd/MM/yyyy")
+                </td>
+                <td>
+                    @slTrongKho <!-- Hiển thị giá trị SL Trong kho -->
+                </td>
+                <td>
+                    <!-- Ô số lượng -->
+                    @Html.TextBox("soluong_" + item.mahanghoa, 1, new { type = "number", min = 1, max = slTrongKho })
+                </td>
+                <td>
+                    <!-- Nút thêm -->
+                    <button type="submit" name="submitBtn" value="@item.id">Thêm</button>
+                </td>
+            </tr>
+        }
+    </table>
+    @*<br />
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+            @using (Html.BeginForm("DonViTinh", "TienIch", FormMethod.Get))
+            {
+                <p>
+                    Kích thước trang: @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @id = "pageSize", @onchange = "changePageSize();" })
+                </p>
+            }
+        </div>
+        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6 text-right">
+            Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+        </div>
+    </div>
+    @Html.PagedListPager(Model, page => Url.Action("DonViTinh", new { page, size = ViewBag.currentSize, searchstring = Request.QueryString["searchstring"] }))*@
+}
+@{
+    var errorMessage = TempData["ErrorMessage"] as string;
+}
+@if (!string.IsNullOrEmpty(errorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @errorMessage
+    </div>
+}

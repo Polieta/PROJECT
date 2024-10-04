@@ -1,0 +1,39 @@
+{% extends 'pages/admin.html' %}
+{% block right_content %}
+<div class="container mt-5">
+    <h2>Danh Sách Tài Khoản Khách Hàng</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Tên khách hàng</th>
+                <th>Email</th>
+                <th>Số điện thoại</th>
+                <th>Địa chỉ</th>
+                <th>Giới tính</th>
+                <th>Tài khoản</th>
+                <th>Mật khẩu</th>
+                <th>Thao tác</th>  <!-- Thêm cột Thao tác -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in khach_hang_tai_khoan_list %}
+                <tr>
+                    <td>{{ item.khach_hang.ho_ten }}</td>
+                    <td>{{ item.khach_hang.email }}</td>
+                    <td>{{ item.khach_hang.so_dien_thoai }}</td>
+                    <td>{{ item.khach_hang.dia_chi }}</td>
+                    <td>{{ item.khach_hang.gioi_tinh }}</td>
+                    <td>{{ item.tai_khoan.ten_tai_khoan }}</td>
+                    <td>{{ item.tai_khoan.mat_khau }}</td>
+                    <td>
+                        <form action="{% url 'xoa_tai_khoan' item.tai_khoan.ma_khach_hang %}" method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger">Xóa</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

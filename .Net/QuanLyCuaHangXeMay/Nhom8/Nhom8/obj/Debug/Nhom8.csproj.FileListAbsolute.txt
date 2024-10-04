@@ -1,0 +1,37 @@
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\bin\Debug\Nhom8.exe.config
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\bin\Debug\Nhom8.exe
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\bin\Debug\Nhom8.pdb
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.csprojResolveAssemblyReference.cache
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_dangnhap.resources
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_DonHang.resources
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_QuanLy.resources
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_TrangChu.resources
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.Properties.Resources.resources
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.csproj.GenerateResource.Cache
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.exe
+D:\nam_3\nam_3_ki_1\NgonNgu_.Net\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\bin\Debug\Nhom8.exe.config
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.exe
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\bin\Debug\Nhom8.exe.config
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.exe
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\bin\Debug\Nhom8.exe
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\bin\Debug\Nhom8.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.csprojResolveAssemblyReference.cache
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_dangnhap.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_DonHang.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_QuanLy.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_TrangChu.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.Properties.Resources.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.csproj.GenerateResource.Cache
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\bin\Debug\Nhom8.exe
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\bin\Debug\Nhom8.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_dangnhap.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_DonHang.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_QuanLy.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.frm_TrangChu.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.Properties.Resources.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.csproj.GenerateResource.Cache
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.csproj.AssemblyReference.cache
+C:\NQC\HK1(Nam3)(2023-2024)\Công nghệ .NET\Đề tài\Đề tài\Nhom8\Nhom8\obj\Debug\Nhom8.csproj.CoreCompileInputs.cache

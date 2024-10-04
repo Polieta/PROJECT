@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Scan Text</title>
+    <style>
+        /* CSS cho khung camera */
+        #cameraContainer {
+            position: relative;
+        }
+        #focusFrame {
+            position: absolute;
+            top: 43%;
+            left: 33%;
+            width: 30%; /* Độ rộng của khung đỏ */
+            height: 13%; /* Chiều cao của khung đỏ */
+            border: 2px solid red;
+            pointer-events: none; /* Đảm bảo khung đỏ không che chắn sự kiện click */
+        }
+
+        #video {
+            max-width: 100%; /* Đảm bảo video không vượt quá chiều rộng của phần tử chứa */
+            max-height: 100%; /* Đảm bảo video không vượt quá chiều cao của phần tử chứa */
+            width: 100vh; /* Thiết lập chiều rộng tự động để giữ tỷ lệ khung hình */
+            height: 100vh; /* Thiết lập chiều cao tự động để giữ tỷ lệ khung hình */
+        }
+
+        /* CSS cho nút chụp và nút thoát */
+        .btn-container {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            margin-top: -200px; /* Khoảng cách giữa nút chụp và nút thoát */
+        }
+
+        #snap, #exit, #switchCamera {
+            height: 130px;
+            width: 130px;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+        /* CSS cho hình được chụp */
+        #canvas {
+            display: block;
+            margin: 0 auto;
+            max-width: 100%;
+            max-height: calc(100vh - 200px); /* Giảm khoảng cách giữa hình ảnh và nút chụp */
+        }
+    </style>
+</head>
+<body>
+    <div id="cameraContainer">
+        <div id="focusFrame"></div>
+        <div class="text-center">
+            <video id="video" autoplay playsinline></video>
+        </div>
+    </div>
+    <div class="btn-container text-center mt-3">
+        <form id="captureForm" method="post" action="/BaoCao/ProcessCapturedImage" style="display: none;">
+            <input type="hidden" name="imageData" id="imageDataInput">
+        </form>
+        <button id="snap" class="btn btn-primary">Chụp Ảnh</button>
+        <button id="exit" class="btn btn-danger">Thoát</button>
+        <button id="switchCamera" class="btn btn-secondary">Chuyển đổi Camera</button>
+    </div>
+    <canvas id="canvas" class="d-none"></canvas>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+    <script>
+        async function startCamera() {
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' } });
+                const video = document.getElementById('video');
+                video.srcObject = stream;
+            } catch (error) {
+                console.error("An error occurred: " + error);
+            };
+        }
+        startCamera();
+        const canvas = document.getElementById('canvas');
+        const context = canvas.getContext('2d');
+        const video = document.getElementById('video');
+
+        document.getElementById('snap').addEventListener('click', function () {
+            const frameWidth = 0.33 * video.videoWidth; // Chiều rộng của khung đỏ
+            const frameHeight = 0.33 * video.videoHeight; // Chiều cao của khung đỏ
+            const frameX = 0.33 * video.videoWidth; // X coordinate của khung đỏ
+            const frameY = 0.33 * video.videoHeight; // Y coordinate của khung đỏ
+            const canvasWidth = frameWidth;
+            const canvasHeight = frameHeight;
+            canvas.width = canvasWidth;
+            canvas.height = canvasHeight;
+            context.drawImage(video, frameX, frameY, frameWidth, frameHeight, 0, 0, canvasWidth, canvasHeight);
+            const dataURL = canvas.toDataURL('image/png');
+            document.getElementById('imageDataInput').value = dataURL;
+            document.getElementById('captureForm').submit();
+        });
+
+
+        document.getElementById('exit').addEventListener('click', function () {
+            window.location.href = "/NhapKho/NhapKho_DienThoai";
+        });
+
+        document.getElementById('switchCamera').addEventListener('click', async function () {
+            const videoTracks = video.srcObject.getVideoTracks();
+            const currentFacingMode = videoTracks[0].getSettings().facingMode;
+            let newFacingMode = 'user'; // 'user' is the front camera, 'environment' is the rear camera
+            if (currentFacingMode === 'user') {
+                newFacingMode = 'environment';
+            }
+            try {
+                const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: newFacingMode } });
+                video.srcObject = stream;
+            } catch (error) {
+                console.error("An error occurred while switching camera: " + error);
+            };
+        });
+    </script>
+</body>
+</html>

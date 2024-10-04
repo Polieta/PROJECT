@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="5d57db722d7d469792f5d89bbeb2ee90" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblcongty" Width="1.5" PointX="0.75" PointY="24" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tbldangnhap" Width="1.5" PointX="3" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tbldvt" Width="1.5" PointX="5.25" PointY="25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblhanghoa" Width="1.5" PointX="13.5" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblkiemkeCTkho" Width="1.5" PointX="15.75" PointY="27.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblkiemkekho" Width="1.5" PointX="8.25" PointY="24.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblkho" Width="1.5" PointX="5.25" PointY="19.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblloaihang" Width="1.5" PointX="5.25" PointY="29.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tbllydoxuat" Width="1.5" PointX="8.25" PointY="21" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblnhacc" Width="1.5" PointX="8.25" PointY="29.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblnhomhang" Width="1.5" PointX="11.25" PointY="24.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblphieunhapkho" Width="1.5" PointX="10.5" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblphieunhapkhoct" Width="1.5" PointX="15.75" PointY="22.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblphieuxuatkho" Width="1.5" PointX="13.5" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tblphieuxuatkhoct" Width="1.5" PointX="15.75" PointY="32.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tbltaotem" Width="1.5" PointX="10.5" PointY="32.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tbltonkhoct" Width="1.5" PointX="7.5" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.tbltonkhoth" Width="1.5" PointX="10.5" PointY="28.875" IsExpanded="true" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbldangnh__idCon__4CA06362" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbldvt__idcongty__6477ECF3" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblhangho__idcon__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblkiemke__idcon__01142BA1" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblkho__idcongty__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblloaiha__idcon__5EBF139D" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbllydoxu__idcon__2A164134" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblnhacc__idcong__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblnhomha__idcon__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieun__idcon__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieun__idcon__0E6E26BF" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieux__idcon__59C55456" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbltaotem__idcon__7C4F7684" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbltonkho__idcon__245D67DE" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbltonkho__idcon__55009F39" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbldvt__userid__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblhangho__useri__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblkiemke__useri__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblkho__userid__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblloaiha__useri__5DCAEF64" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbllydoxu__useri__29221CFB" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblnhacc__userid__71D1E811" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblnhomha__useri__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieun__useri__08B54D69" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieux__useri__5BAD9CC8" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbltaotem__useri__7B5B524B" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblhanghoa__dvt__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblhangho__loaih__6B24EA82" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblhangho__nhomh__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblkiemke__mahan__3C34F16F" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieux__mahan__5F7E2DAC" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblkiemke__loaih__3D2915A8" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblkiemkeCTk__id__3E1D39E1" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblkiemke__idkho__02084FDA" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieun__idkho__07C12930" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieux__idkho__5AB9788F" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbltonkho__idkho__1EA48E88" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbltonkho__idkho__4F47C5E3" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblloaiha__nhomh__5CD6CB2B" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbltaotem__loaih__797309D9" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieux__idlyd__5CA1C101" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tbltaotem__nhacc__7A672E12" ManuallyRouted="false" />
+        <AssociationConnector Association="QuanLyKho_HongLamModel.FK__tblphieunhap__id__0D7A0286" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="QuanLyKho_HongLamModel.bangtamnhapkho" Width="1.5" PointX="4.5" PointY="15.5" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

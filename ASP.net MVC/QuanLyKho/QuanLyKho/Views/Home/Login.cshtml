@@ -1,0 +1,155 @@
+﻿@model QuanLyKho.Models.tblcongty
+@{
+    ViewBag.Title = "Trang đăng nhập";
+    Layout = "~/Views/Shared/DangNhap_DangKy.cshtml";
+}
+
+<style>
+    /* CSS cho pop-up thông báo thành công và lỗi */
+    .custom-success-message {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 9999;
+        text-align: center;
+        width: 60%;
+        max-width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .custom-success-text {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    .custom-close-button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+        .custom-close-button:hover {
+            background-color: #c82333;
+        }
+    /* CSS cho pop-up cảnh báo */
+    #warning-popup {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #ffc107;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 9999;
+        text-align: center;
+        width: 60%;
+        max-width: 400px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    #warning-popup-text {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    #warning-popup .custom-close-button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+        #warning-popup .custom-close-button:hover {
+            background-color: #c82333;
+        }
+</style>
+
+<div class="row justify-content-md-center">
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title" style="align-items:center"><h1>Đăng Nhập</h1></div>
+            </div>
+            <div class="card-body">
+                @using (Html.BeginForm("Login", "Home", FormMethod.Post))
+                {
+                    @Html.AntiForgeryToken()
+                    <div class="main-agileinfo">
+                        <div class="agileits-top">
+                            <div class="form-group">
+                                Tên đăng nhập
+                               @Html.TextBox("name", "", new { @class = "form-control" })
+                            </div>
+                            <div class="form-group">
+                                Mật khẩu
+                                @Html.Password("password", "", new { @class = "form-control", @id = "passwordInput" })
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(model => model.id, "Công ty:", new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.DropDownListFor(model => model.id, ViewBag.ct as SelectList, new { id = "Congty", @class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.id)
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" name="submit" class="btn btn-primary" value="Đăng nhập" />
+                            </div>
+                            <div class="form-group">
+                                <p>Chưa có tài khoản <a href="/Home/Register">Đăng ký</a></p>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+</div>
+<div id="error-popup" class="custom-success-message" style="display: none;">
+    <p id="error-popup-text" class="custom-success-text"></p>
+    <button onclick="closeErrorPopup()" class="custom-close-button">OK</button>
+</div>
+<div id="warning-popup" class="custom-success-message" style="display: none; background-color: #ffc107;">
+    <p id="warning-popup-text" class="custom-success-text"></p>
+    <button onclick="closeWarningPopup()" class="custom-close-button">OK</button>
+</div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var errorMessage = '@TempData["ErrorMessage"]';
+        if (errorMessage !== '') {
+            if (errorMessage.includes('Tài khoản chưa được kích hoạt')) {
+                document.getElementById("warning-popup-text").innerHTML = errorMessage;
+                document.getElementById("warning-popup").style.display = "block";
+            } else {
+                document.getElementById("error-popup-text").innerHTML = errorMessage;
+                document.getElementById("error-popup").style.display = "block";
+            }
+        }
+    });
+    function closeErrorPopup() {
+        document.getElementById("error-popup").style.display = "none";
+    }
+    function closeWarningPopup() {
+        document.getElementById("warning-popup").style.display = "none";
+    }
+    function togglePassword() {
+        var passwordInput = document.getElementById('passwordInput');
+        var showHideBtn = document.getElementById('showHideBtn');
+
+        if (passwordInput.type === 'password') {
+            passwordInput.type = 'text';
+            showHideBtn.textContent = 'Ẩn';
+        } else {
+            passwordInput.type = 'password';
+            showHideBtn.textContent = 'Hiện';
+        }
+    }
+</script>

@@ -1,0 +1,277 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model IPagedList<QuanLyKho.Models.tbltonkhoth>
+
+@{
+    ViewBag.Title = "Tồn Kho";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    .custom-error-message {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 9999;
+        text-align: center;
+        width: 60%; /* Điều chỉnh kích thước thông báo */
+        max-width: 400px; /* Kích thước tối đa */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng shadow */
+    }
+
+    .custom-error-text {
+        font-size: 18px; /* Điều chỉnh kích thước chữ */
+        margin-bottom: 20px; /* Khoảng cách với nút OK */
+    }
+
+    .custom-close-button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+        .custom-close-button:hover {
+            background-color: #c82333;
+        }
+
+    .table {
+        color: #000000; /* Màu chữ đen */
+        background-color: #ffffff; /* Màu nền trắng */
+    }
+
+    .custom-error-text {
+        background-color: rgba(255, 255, 255, 0); /* Màu nền trong suốt */
+        color: red; /* Màu chữ đỏ */
+    }
+</style>
+<body style="font-family: sans-serif;">
+    <h2 style="text-align: center;">TỒN KHO</h2>
+    <div style="text-align: center;">
+        <div class="form-group" style="margin-bottom: 10px;">
+            <label for="ma">Mã hàng hóa:</label>
+            <input type="text" id="ma" class="textbox" style="width: 150px;height: 30px;border: 1px solid #000;border-radius: 5px;padding: 10px;" onkeypress="return onlyNumberKey(event)" onkeyup="searchTable()">
+            <div id="error-msg" style="color: red; display: none;">Vui lòng chỉ nhập số</div>
+        </div>
+        <div class="button-group" style="align-content: center;">
+            @*<button type="button" id="btnThemMoi" class="btn btn-primary">Quét Mã</button>*@
+            @*<button type="button" id="btnSua" disabled>Sửa</button>
+            <button type="button" id="btnXoa" disabled>Xóa</button>
+            <button type="button" id="btnIn" disabled>In</button>*@
+            <button type="button" id="btnTimKiem">Tìm kiếm</button>
+            <button type="button" id="btnKT">Kết thúc</button>
+        </div>
+    </div>
+    <table class="table" style="width:100%;border-collapse:collapse;">
+        <thead style="background-color:#ccc;">
+            <tr>
+                <th>MÃ HÀNG HÓA</th>
+                <th>Số lượng</th>
+                @*<th>Ảnh</th>*@
+                @*<th>Sử dụng</th>*@
+            </tr>
+        </thead>
+        <tbody>
+           @foreach (var item in Model)
+{
+    <tr>
+        <td>@Html.DisplayFor(modelItem => item.mahanghoa)</td>
+        <td>
+            @{
+            // Kiểm tra xem các giá trị tondau, sln, slx có tồn tại không
+            var tondau = item.tondau ?? 0; // Nếu tondau không tồn tại, gán giá trị mặc định là 0
+            var sln = item.sln ?? 0; // Nếu sln không tồn tại, gán giá trị mặc định là 0
+            var slx = item.slx ?? 0; // Nếu slx không tồn tại, gán giá trị mặc định là 0
+
+            // Hiển thị giá trị tương ứng
+            var result = (tondau + sln) - slx;
+            }
+            @result
+        </td>
+        @*<td>@Html.DisplayFor(modelItem => item.Image)</td>*@
+    </tr>
+}
+        </tbody>
+    </table>
+    <br />
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+            @using (Html.BeginForm("BaoCaoNhap", "BaoCao", FormMethod.Get))
+            {
+                <p>
+                    Kích thước trang: @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @id = "pageSize", @onchange = "changePageSize();" })
+                </p>
+            }
+        </div>
+        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6 text-right">
+            Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+        </div>
+    </div>
+    @Html.PagedListPager(Model, page => Url.Action("BaoCaoNhap", new { page, size = ViewBag.currentSize, searchstring = Request.QueryString["searchstring"] }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded, MaximumPageNumbersToDisplay = 5 })
+</body>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div id="error-popup" class="custom-error-message">
+        <p id="error-popup-text" class="custom-error-text">@TempData["ErrorMessage"]</p>
+        <button onclick="closeErrorPopup()" class="custom-close-button">OK</button>
+    </div>
+}
+<div id="error-popup-empty" class="custom-error-message" style="display: none;">
+    <p id="error-popup-text-empty" class="custom-error-text">Không có dữ liệu phù hợp</p>
+    <button onclick="closeErrorPopupEmpty()" class="custom-close-button">OK</button>
+</div>
+<style>
+    /* Hiển thị tooltip khi hover vào nút */
+    #btnXoa:hover::after,
+    #btnIn:hover::after,
+    #btnSua:hover::after {
+        content: "Hãy nhập mã";
+        position: absolute;
+        background-color: #000;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: -30px;
+        margin-left: -50px;
+        z-index: 1;
+    }
+</style>
+<script>
+    function changePageSize() {
+        var selectedPageSize = document.getElementById("pageSize").value;
+        var maValue = document.getElementById("ma").value.trim(); // Lấy giá trị từ trường ma
+        var url = '@Url.Action("BaoCaoNhap", "BaoCao")' + '?size=' + selectedPageSize + '&page=' + '@ViewBag.PageNumber';
+        // Nếu trường ma không rỗng, thêm giá trị của ma vào URL
+        if (maValue !== '') {
+            url += '&searchstring=' + maValue;
+        }
+        window.location.href = url;
+    }
+    function displayErrorPopup() {
+        var errorMessage = '@TempData["ErrorMessage"]';
+        if (errorMessage !== '') {
+            document.getElementById("error-popup-text").innerHTML = errorMessage;
+            document.getElementById("error-popup").style.display = "block";
+        }
+    }
+
+    function closeErrorPopup() {
+        document.getElementById("error-popup").style.display = "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        displayErrorPopup();
+    });
+
+    //function updateHideStatus(checkbox, khoId) {
+    //    var link = document.getElementById('link_' + khoId);
+    //    if (checkbox.checked) {
+    //        link.setAttribute('href', '/NhapKho/CapNhatTrangThaiTEM?id=' + khoId + '&selectedValue=1');
+    //        link.click();
+    //    } else {
+    //        link.setAttribute('href', '/NhapKho/CapNhatTrangThaiTEM?id=' + khoId + '&selectedValue=0');
+    //        link.click();
+    //    }
+    //}
+    //var btnIn = document.getElementById('btnIn');
+    //var btnSua = document.getElementById('btnSua');
+    //var btnXoa = document.getElementById('btnXoa');
+    var maInput = document.getElementById('ma');
+    var btnKT = document.getElementById('btnKT');
+    function toggleButtonsVisibility() {
+        if (maInput.value.trim() === '') {
+            btnSua.disabled = true;
+            btnXoa.disabled = true;
+            btnIn.disabled = true;
+        } else {
+            btnSua.disabled = false;
+            btnXoa.disabled = false;
+            btnIn.disabled = false;
+        }
+    }
+    function toggleTooltipVisibility() {
+        var tooltip = document.getElementById('tooltip');
+        if (maInput.value.trim() === '') {
+            tooltip.style.display = 'block';
+        } else {
+            tooltip.style.display = 'none';
+        }
+    }
+    toggleButtonsVisibility();
+    maInput.addEventListener('input', function () {
+        toggleButtonsVisibility();
+        toggleTooltipVisibility();
+    });
+    var maInput = document.getElementById('ma');
+    maInput.addEventListener('input', function () {
+        searchTable();
+    });
+    window.onload = function () {
+        toggleTooltipVisibility();
+    };
+    //var btnThemMoi = document.getElementById('btnThemMoi');
+    //btnThemMoi.addEventListener('click', function () {
+    //    window.location.href = '/NhapKho/TaoTem';
+    //});
+    //var btnThemMoi = document.getElementById('btnThemMoi');
+    //btnThemMoi.addEventListener('click', function () {
+    //    window.location.href = '/BaoCao/ScanText';
+    //});
+    //btnXoa.addEventListener('click', function () {
+    //    var maValue = maInput.value;
+    //    window.location.href = '/NhapKho/XoaTem?ma=' + maValue;
+    //});
+
+    //btnSua.addEventListener('click', function () {
+    //    var maValue = maInput.value;
+    //    window.location.href = '/NhapKho/SuaTem?ma=' + maValue;
+    //});
+
+    //btnIn.addEventListener('click', function () {
+    //    var maValue = maInput.value;
+    //    window.location.href = '/NhapKho/InTem?ma=' + maValue;
+    //});
+
+    btnKT.addEventListener('click', function () {
+        var maValue = maInput.value;
+        window.location.href = '/Home/Index';
+    });
+
+    function onlyNumberKey(evt) {
+        var charCode = (evt.which) ? evt.which : evt.keyCode;
+        if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+            document.getElementById('error-msg').style.display = 'block';
+            return false;
+        }
+        document.getElementById('error-msg').style.display = 'none';
+        return true;
+    }
+
+    //TÌm kiếm
+    function closeErrorPopupEmpty() {
+        document.getElementById("error-popup-empty").style.display = "none";
+    }
+    var btnTimKiem = document.getElementById('btnTimKiem');
+    btnTimKiem.addEventListener('click', function () {
+        var maValue = maInput.value.trim();
+        var selectedPageSize = document.getElementById("pageSize").value; // Lấy kích thước trang được chọn
+        var currentPage = '@Model.PageNumber'; // Lấy trang hiện tại từ Razor
+        var url = '/BaoCao/BaoCaoNhap?searchstring=' + maValue; // URL cơ bản
+        // Thêm thông tin về kích thước trang và trang hiện tại nếu có giá trị
+        if (selectedPageSize !== '') {
+            url += '&size=' + selectedPageSize;
+        }
+        if (currentPage !== '') {
+            url += '&page=' + currentPage;
+        }
+        window.location.href = url; // Chuyển hướng đến URL đã được cập nhật
+    });
+</script>

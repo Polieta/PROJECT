@@ -1,0 +1,1 @@
+Lập trình chức năng quản lí trang chủ, in, sửa và tìm kiếm thông tin trong quản lí.

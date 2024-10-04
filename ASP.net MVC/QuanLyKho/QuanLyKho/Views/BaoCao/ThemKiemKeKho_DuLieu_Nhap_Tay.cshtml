@@ -1,0 +1,186 @@
+﻿@model QuanLyKho.Models.tblkiemkeCTkho
+@{
+    ViewBag.Title = "Kiểm kê";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    .btn-custom {
+        background-color: #007bff; /* Màu nền của nút "Thêm" */
+        border: 1px solid #ccc;
+        padding: 8px 15px;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+    }
+    .popup-text {
+        background-color: rgba(255, 255, 255, 0); /* Màu nền trong suốt */
+        color: red; /* Màu chữ đỏ */
+    }
+</style>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h2 class="text-center">Kiểm kê hàng hóa</h2>
+                <hr />
+                @Html.ValidationSummary(true)
+                <div class="form-group">
+                    @Html.LabelFor(model => model.mahang, "Mã hàng hóa", new { @class = "control-label col-md-2" })
+                    <div class="col-md-5">
+                        <select id="ma" name="ma" class="form-control">
+                            @foreach (var item in ViewBag.hh as SelectList)
+                            {
+                                <option value="@item.Value">@item.Text</option>
+                            }
+                        </select>
+                        @Html.ValidationMessageFor(model => model.mahang)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.loaihang, "Loại hàng", new { @class = "control-label col-md-3" })
+                    <div class="col-md-5">
+                        @Html.DropDownListFor(model => model.loaihang, ViewBag.lh as SelectList, new { id = "loaihang", @class = "form-control" })
+                        @Html.ValidationMessageFor(model => model.loaihang)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.solo, "Số lô", new { @class = "control-label col-md-3" })
+                    <div class="col-md-7">
+                        @Html.TextBoxFor(model => model.solo, new { @class = "form-control required", placeholder = "Nhập lô" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.nsx, "Ngày sản xuất", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <input type="date" id="nsx" name="nsx" />
+                        @Html.ValidationMessageFor(model => model.HSD)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.HSD, "Hạn sử dụng", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        <input type="date" id="hsd" name="hsd" />
+                        @Html.ValidationMessageFor(model => model.HSD)
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.sl, "Số lượng", new { @class = "control-label col-md-3" })
+                    <div class="col-md-9">
+                        @Html.EditorFor(model => model.sl, new { @class = "form-control", min = "1", id = "sltem" })
+                        @Html.ValidationMessageFor(model => model.sl)
+                    </div>
+                </div>
+                <div class="form-group text-center">
+                    <div>
+                        <input type="submit" value="Thêm" class="btn-custom" />
+                        <input type="button" value="Kết thúc" class="btn btn-danger" style="border: 1px solid #ccc; padding: 8px 15px;" id="btnFinish" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div id="error-popup" class="custom-error-message">
+        <p id="error-popup-text" class="custom-error-text">@TempData["ErrorMessage"]</p>
+        <button onclick="closeErrorPopup()" class="custom-close-button">OK</button>
+    </div>
+}
+<div id="custom-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border: 1px solid #ccc; z-index: 9999; text-align: center;">
+    <p id="custom-popup-text" class="popup-text" style="font-size: 18px; margin-bottom: 20px;"></p>
+    <button onclick="closeCustomPopup()" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; font-size: 16px; border-radius: 4px; transition: background-color 0.3s;">OK</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.0/css/select2.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.1.0-beta.0/js/select2.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#ma, #loaihang').select2({
+            width: '100%', // Thiết lập chiều rộng là 100% để mở rộng linh hoạt
+            placeholder: "Chọn một tùy chọn", // Placeholder cho dropdown list
+            allowClear: true // Cho phép xóa lựa chọn
+            // Các tùy chọn khác của Select2 có thể được thêm vào ở đây
+        });
+    });
+</script>
+
+<script>
+    document.getElementById('btnFinish').addEventListener('click', function () {
+        // Hiển thị thông báo xác nhận
+        Swal.fire({
+            title: 'Xác nhận kiểm kê xong?',
+            showCancelButton: true,
+            confirmButtonText: 'Có',
+            cancelButtonText: 'Không',
+            icon: 'question',
+        }).then((result) => {
+            // Xử lý lựa chọn của người dùng
+            if (result.isConfirmed) {
+                // Nếu người dùng chọn "Có", thực hiện chuyển hướng đến một controller khác
+                window.location.href = '/BaoCao/KiemKeKho'; // Thay thế ControllerName và ActionName bằng tên thực tế của controller và action bạn muốn chuyển đến
+    }
+    });
+    });
+    function displayErrorPopup() {
+        var errorMessage = '@TempData["ErrorMessage"]';
+        if (errorMessage !== '') {
+            document.getElementById("error-popup-text").innerHTML = errorMessage;
+            document.getElementById("error-popup").style.display = "block";
+        }
+    }
+    // Hàm đóng pop-up lỗi
+    function closeErrorPopup() {
+        document.getElementById("error-popup").style.display = "none";
+    }
+    // Gọi hàm hiển thị pop-up khi trang được tải
+    document.addEventListener("DOMContentLoaded", function () {
+        displayErrorPopup(); // Hiển thị pop-up lỗi nếu có dữ liệu trong TempData["ErrorMessage"]
+    });
+    function closeCustomErrorPopup() {
+        document.getElementById("custom-error-popup").style.display = "none";
+    }
+    // Thay đổi mã JavaScript để sử dụng ID mới của thông báo lỗi
+    $('form').submit(function (e) {
+        var lotValue = $('#lot').val().trim();
+        var nsxValue = $('#nsx').val();
+        var hsdValue = $('#hsd').val();
+        var sltemValue = $('#sltem').val();
+        var nhacc = $('#nhacc').val();
+        // Kiểm tra xem trường 'Lô', 'NSX', 'HSD', 'SL' có được điền đầy đủ và hợp lệ hay không
+        if (lotValue === '' || nsxValue === '' || hsdValue === '' || sltemValue === '' || nhacc === '') {
+            e.preventDefault(); // Ngăn chặn việc submit form nếu có trường bị bỏ trống
+            $('#custom-error-popup-text').text('Vui lòng điền đầy đủ thông tin!'); // Hiển thị thông báo lỗi
+            $('#custom-error-popup').css('display', 'block'); // Hiển thị pop-up lỗi
+        } else if (isNaN(sltemValue) || sltemValue <= 0) { // Kiểm tra xem SL có phải là số và lớn hơn 0 không
+            e.preventDefault(); // Ngăn chặn việc submit form nếu SL không hợp lệ
+            $('#custom-error-popup-text').text('Số lượng không hợp lệ!'); // Hiển thị thông báo lỗi
+            $('#custom-error-popup').css('display', 'block'); // Hiển thị pop-up lỗi
+        }
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        flatpickr('#nsx', {
+            dateFormat: 'd-m-Y H:i:S', // Định dạng giờ, phút, giây (H:i:S)
+            altFormat: 'd-m-Y H:i:S', // Định dạng giờ, phút, giây trong altInput
+            altInput: true,
+            enableTime: true,
+            defaultDate: new Date(), // Thiết lập ngày mặc định là ngày hiện tại
+        });
+        flatpickr('#hsd', {
+            dateFormat: 'd-m-Y H:i:S', // Định dạng giờ, phút, giây (H:i:S)
+            altFormat: 'd-m-Y H:i:S', // Định dạng giờ, phút, giây trong altInput
+            altInput: true,
+            enableTime: true,
+            defaultDate: new Date(), // Thiết lập ngày mặc định là ngày hiện tại
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        // Đặt giá trị mặc định cho ô nhập số lượng
+        document.getElementById('sltem').value = '1';
+    });
+</script>

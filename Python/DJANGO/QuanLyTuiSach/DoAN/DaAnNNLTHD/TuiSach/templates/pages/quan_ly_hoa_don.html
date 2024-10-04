@@ -1,0 +1,30 @@
+{% extends 'pages/admin.html' %}
+{% block right_content %}
+<div class="container mt-5">
+    <h2>Danh Sách Hóa Đơn</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Mã Hóa Đơn</th>
+                <th>Người Đặt Hàng</th>
+                <th>Ngày Đặt Hàng</th>
+                <th>Tổng Tiền</th>
+                <th>Chi Tiết</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for don_hang in don_hang_list %}
+                <tr>
+                    <td>{{ don_hang.ma_don_hang }}</td>
+                    <td>{{ don_hang.ma_khach_hang.ho_ten }}</td>
+                    <td>{{ don_hang.ngay_dat_hang }}</td>
+                    <td>{{ don_hang.tong_tien }}</td>                    
+                    <td>
+                        <a href="{% url 'chi_tiet_hoa_don' don_hang.ma_don_hang %}" class="btn btn-primary">Chi Tiết</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

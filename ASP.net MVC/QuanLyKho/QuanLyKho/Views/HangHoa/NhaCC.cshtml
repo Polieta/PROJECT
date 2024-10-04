@@ -1,0 +1,279 @@
+﻿@using PagedList.Mvc;
+@using PagedList;
+@model IPagedList<QuanLyKho.Models.tblnhacc>
+@{
+    ViewBag.Title = "Nhà cung cấp";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    /*code chỉnh phân trang đẹp hơn*/
+    .pagination {
+        list-style: none; /* Ẩn dấu chấm liên kết */
+        padding: 0;
+        display: flex;
+        justify-content: center; /* Căn giữa các nút phân trang */
+    }
+
+        .pagination li {
+            margin: 0 5px; /* Khoảng cách giữa các nút phân trang */
+        }
+
+        .pagination a {
+            text-decoration: none;
+            color: #007bff; /* Màu của các nút phân trang */
+            padding: 5px 10px;
+            border: 1px solid #007bff; /* Viền của các nút phân trang */
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s; /* Thêm hiệu ứng hover */
+        }
+
+            .pagination a:hover {
+                background-color: #007bff; /* Màu nền khi hover */
+                color: #fff; /* Màu chữ khi hover */
+                border-color: #007bff; /* Màu viền khi hover */
+            }
+    /**/
+    .custom-error-message {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        z-index: 9999;
+        text-align: center;
+        width: 60%; /* Điều chỉnh kích thước thông báo */
+        max-width: 400px; /* Kích thước tối đa */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Thêm hiệu ứng shadow */
+    }
+
+    .custom-error-text {
+        font-size: 18px; /* Điều chỉnh kích thước chữ */
+        margin-bottom: 20px; /* Khoảng cách với nút OK */
+    }
+
+    .custom-close-button {
+        background-color: #dc3545;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+        transition: background-color 0.3s;
+    }
+
+        .custom-close-button:hover {
+            background-color: #c82333;
+        }
+    .table {
+        color: #000000; /* Màu chữ đen */
+        background-color: #ffffff; /* Màu nền trắng */
+    }
+    .custom-error-text {
+        background-color: rgba(255, 255, 255, 0); /* Màu nền trong suốt */
+        color: red; /* Màu chữ đỏ */
+    }
+</style>
+<body style="font-family: sans-serif;">
+    <h2 style="text-align: center;">Nhà cung cấp</h2>
+    <div style="text-align: center;">
+        <div class="form-group" style="margin-bottom: 10px;">
+            <label for="ma">Mã nhà cung cấp:</label>
+            <input type="text" id="ma" class="textbox" style="width: 150px;height: 30px;border: 1px solid #000;border-radius: 5px;padding: 10px;">
+        </div>
+        <div class="button-group" style="align-content: center;">
+            <button type="button" id="btnThemMoi">Thêm mới</button>
+            <button type="button" id="btnSua" disabled>Sửa</button>
+            <button type="button" id="btnXoa" disabled>Xóa</button>
+            <button type="button" id="btnTimKiem">Tìm kiếm</button>
+            <button type="button" id="btnKetThuc">Kết thúc</button>
+        </div>
+    </div>
+    <table class="table" style="width:100%;border-collapse:collapse;">
+        <thead style="background-color:#ccc;">
+            <tr>
+                @*<th>STT</th>*@
+                <th>Mã nhà cung cấp</th>
+                <th>Tên nhà cung cấp</th>
+                <th>Nhóm</th>
+                <th>Địa chỉ</th>
+                <th>SĐT</th>
+                <th>FAX</th>
+                <th>Email</th>
+                <th>Mô tả</th>
+                <th>Sử dụng</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @*<td>@Html.DisplayFor(modelItem => item.id) @Html.HiddenFor(model => item.id)</td>*@
+                    <td>@Html.DisplayFor(modelItem => item.ma)</td>
+                    <td>@Html.DisplayFor(modelItem => item.ten)</td>
+                    <td>@if (item.loai == 1)
+                            {
+                                <text>Nhà cung cấp</text>
+                            }
+                            else if (item.loai == 0)
+                            {
+                                <text>Khách hàng</text>
+                            }
+                            else
+                            {
+                                <text>Nhà cung cấp/Khách hàng</text>
+                            }
+                            </td>
+                    <td>@Html.DisplayFor(modelItem => item.diachi)</td>
+                    <td>@Html.DisplayFor(modelItem => item.sdt)</td>
+                    <td>@Html.DisplayFor(modelItem => item.fax)</td>
+                    <td>@Html.DisplayFor(modelItem => item.email)</td>
+                    <td>@Html.DisplayFor(modelItem => item.mota)</td>
+                    <td>
+                        <input type="checkbox" id="hide_@item.id" @(item.hide == 0 ? "checked" : "") onchange="updateHideStatus(this, @item.id)">
+                        <a id="link_@item.id" href="/HangHoa/CapNhatTrangThaiNhaCC" style="display:none;">Sử dụng</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <div class="row">
+        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6">
+            @using (Html.BeginForm("NhaCC", "HangHoa", FormMethod.Get))
+            {
+                <p>
+                    Kích thước trang: @Html.DropDownList("size", (List<SelectListItem>)ViewBag.size, new { @id = "pageSize", @onchange = "changePageSize();" })
+                </p>
+            }
+        </div>
+        <div class="col-md-6 col-lg-6 col-xs-6 col-sm-6 text-right">
+            Trang: @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber) / @Model.PageCount
+        </div>
+    </div>
+    @Html.PagedListPager(Model, page => Url.Action("NhaCC", new { page, size = ViewBag.currentSize, searchstring = Request.QueryString["searchstring"] }), new PagedListRenderOptions { Display = PagedListDisplayMode.IfNeeded, MaximumPageNumbersToDisplay = 5 })
+</body>
+@if (TempData["ErrorMessage"] != null)
+{
+    <div id="error-popup" class="custom-error-message">
+        <p id="error-popup-text" class="custom-error-text">@TempData["ErrorMessage"]</p>
+        <button onclick="closeErrorPopup()" class="custom-close-button">OK</button>
+    </div>
+}
+<style>
+    /* Hiển thị tooltip khi hover vào nút */
+    #btnXoa:hover::after,
+    #btnSua:hover::after {
+        content: "Hãy nhập mã";
+        position: absolute;
+        background-color: #000;
+        color: #fff;
+        padding: 5px;
+        border-radius: 5px;
+        margin-top: -30px;
+        margin-left: -50px;
+        z-index: 1;
+    }
+</style>
+<script>
+    function changePageSize() {
+        var selectedPageSize = document.getElementById("pageSize").value;
+        var maValue = document.getElementById("ma").value.trim(); // Lấy giá trị từ trường ma
+        var url = '@Url.Action("NhaCC", "HangHoa")' + '?size=' + selectedPageSize + '&page=' + '@ViewBag.PageNumber';
+        if (maValue !== '') {
+            url += '&searchstring=' + maValue;
+        }
+        window.location.href = url;
+    }
+    function displayErrorPopup() {
+        var errorMessage = '@TempData["ErrorMessage"]';
+        if (errorMessage !== '') {
+            document.getElementById("error-popup-text").innerHTML = errorMessage;
+            document.getElementById("error-popup").style.display = "block";
+        }
+    }
+
+    function closeErrorPopup() {
+        document.getElementById("error-popup").style.display = "none";
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        displayErrorPopup();
+    });
+    function updateHideStatus(checkbox, khoId) {
+        var link = document.getElementById('link_' + khoId);
+        if (checkbox.checked) {
+            link.setAttribute('href', '/HangHoa/CapNhatTrangThaiNhaCC?id=' + khoId + '&selectedValue=1');
+            link.click();
+        } else {
+            link.setAttribute('href', '/HangHoa/CapNhatTrangThaiNhaCC?id=' + khoId + '&selectedValue=0');
+            link.click();
+        }
+    }
+    var btnSua = document.getElementById('btnSua');
+    var btnXoa = document.getElementById('btnXoa');
+    var maInput = document.getElementById('ma');
+
+    function toggleButtonsVisibility() {
+        if (maInput.value.trim() === '') {
+            btnSua.disabled = true;
+            btnXoa.disabled = true;
+        } else {
+            btnSua.disabled = false;
+            btnXoa.disabled = false;
+        }
+    }
+    function toggleTooltipVisibility() {
+        var tooltip = document.getElementById('tooltip');
+        if (maInput.value.trim() === '') {
+            tooltip.style.display = 'block';
+        } else {
+            tooltip.style.display = 'none';
+        }
+    }
+    toggleButtonsVisibility();
+    maInput.addEventListener('input', function () {
+        toggleButtonsVisibility();
+        toggleTooltipVisibility();
+    });
+    window.onload = function () {
+        toggleTooltipVisibility();
+    };
+    var btnThemMoi = document.getElementById('btnThemMoi');
+    btnThemMoi.addEventListener('click', function () {
+        window.location.href = '/HangHoa/ThemNhaCC';
+    });
+
+    btnXoa.addEventListener('click', function () {
+        var maValue = maInput.value;
+        window.location.href = '/HangHoa/XoaNhaCC?ma=' + maValue;
+    });
+
+    btnSua.addEventListener('click', function () {
+        var maValue = maInput.value;
+        window.location.href = '/HangHoa/SuaNhaCC?ma=' + maValue;
+    });
+
+    var btnKetThuc = document.getElementById('btnKetThuc');
+    btnKetThuc.addEventListener('click', function () {
+        window.location.href = '/Home/Index';
+    });
+    var btnTimKiem = document.getElementById('btnTimKiem');
+    btnTimKiem.addEventListener('click', function () {
+        var maValue = maInput.value.trim();
+        var selectedPageSize = document.getElementById("pageSize").value; // Lấy kích thước trang được chọn
+        var currentPage = '@Model.PageNumber'; // Lấy trang hiện tại từ Razor
+        var url = '/HangHoa/NhaCC?searchstring=' + maValue; // URL cơ bản
+        // Thêm thông tin về kích thước trang và trang hiện tại nếu có giá trị
+        if (selectedPageSize !== '') {
+            url += '&size=' + selectedPageSize;
+        }
+        if (currentPage !== '') {
+            url += '&page=' + currentPage;
+        }
+        window.location.href = url; // Chuyển hướng đến URL đã được cập nhật
+    });
+</script>

@@ -1,0 +1,324 @@
+﻿<link href="~/Contents/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+<link href="~/Contents/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+      rel="stylesheet">
+<!-- Custom styles for this template-->
+<link href="~/Contents/css/sb-admin-2.min.css" rel="stylesheet"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />*@
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Trang quản lý</title>
+    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+    <link href="~/Assets/css/styles.css" rel="stylesheet" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" ></script>
+    <script src="https://unpkg.com/instascan@1.0.0/dist/instascan.min.js"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Contents/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Contents/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="~/Contents/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="~/Contents/js/sb-admin-2.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="~/Contents/vendor/chart.js/Chart.min.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="~/Contents/js/demo/chart-area-demo.js"></script>
+    <script src="~/Contents/js/demo/chart-pie-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/Assets/js/scripts.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="~/Assets/assets/demo/chart-area-demo.js"></script>
+    <script src="~/Assets/assets/demo/chart-bar-demo.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"></script>
+    <script src="~/Assets/js/datatables-simple-demo.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .horizontal-scroll {
+            overflow-x: auto; /* Cho phép cuộn ngang khi nội dung vượt quá chiều rộng */
+            white-space: nowrap; /* Ngăn chặn các phần tử con xuống dòng, giữ chúng trên cùng một dòng */
+        }
+        .breadcrumb-container {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+        .sb-topnav{
+            height:5%;
+            width:100%;
+        }
+        .breadcrumb li {
+            display: inline;
+            font-size: 16px; /* Font size mặc định */
+            margin-right: 5px; /* Khoảng cách giữa các phần tử breadcrumb */
+        }
+            .breadcrumb li.active {
+                font-weight: bold; /* Hiển thị phần tử active in đậm */
+            }
+        .color {
+            color: red;
+        }
+    </style>
+</head>
+<body id="page-top" >
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/Home/Index">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">TRANG CHỦ</div>
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+            </a>
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+            <!-- Bàn làm việc -->
+            <div id="layoutSidenav">
+                    <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+                        <div class="sb-sidenav-menu">
+                            <div class="nav">
+                                <a class="nav-link" href="/Home/Index">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                    <h3 style="text-align:center">Bàn làm việc</h3>
+                                    <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                                </a>
+                                <div class="sb-sidenav-menu-heading">Chức năng</div>
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsNhap" aria-expanded="false" aria-controls="collapseLayoutsNhap">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    <h4>Nhập kho</h4>
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="collapseLayoutsNhap" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="/NhapKho/NhapKho">Phiếu nhập kho</a>
+                                        <a class="nav-link" href="/NhapKho/NhapKho_DienThoai">Phiếu nhập kho(điện thoại)</a>          
+                                    </nav>
+                                </div>
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapseLayoutsXuat" aria-expanded="false" aria-controls="collapseLayoutsXuat">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    <h4>Xuất kho</h4>
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="collapseLayoutsXuat" aria-labelledby="headingTwo" data-bs-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav">
+                                        <a class="nav-link" href="#">Phiếu xuất kho</a>
+                                    </nav>
+                                </div>
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePagesBaoCao" aria-expanded="false" aria-controls="collapsePagesBaoCao">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                    <h4>Báo cáo</h4>
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="collapsePagesBaoCao" aria-labelledby="headingThree" data-bs-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPagesBaoCao">
+                                        <a class="nav-link" href="/BaoCao/KiemKeKho">Kiểm kê kho</a>
+                                        <a class="nav-link" href="#">Báo cáo nhập</a>
+                                        <a class="nav-link" href="#">Báo cáo xuất</a>
+                                        <a class="nav-link" href="#">Báo cáo nhập xuất</a>
+                                    </nav>
+                                </div>
+                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePagesTienIch" aria-expanded="false" aria-controls="collapsePagesTienIch">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+                                    <h4>Tiện ích</h4>
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <div class="collapse" id="collapsePagesTienIch" aria-labelledby="headingFour" data-bs-parent="#sidenavAccordion">
+                                    <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPagesTienIch">
+                                        <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#pagesCollapseAuthDanhMuc" aria-expanded="false" aria-controls="pagesCollapseAuthDanhMuc">
+                                            Khai báo danh mục
+                                            <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                        </a>
+                                        <div class="collapse" id="pagesCollapseAuthDanhMuc" aria-labelledby="headingFive" data-bs-parent="#sidenavAccordionPagesTienIch">
+                                            <nav class="sb-sidenav-menu-nested nav">
+                                                <a class="nav-link" href="/TienIch/Kho">Kho</a>
+                                                <a class="nav-link" href="/HangHoa/HangHoa">Hàng hóa</a>
+                                                <a class="nav-link" href="/TienIch/NhomHang">Nhóm hàng</a>
+                                                <a class="nav-link" href="/TienIch/LoaiHang">Loại hàng</a>
+                                                <a class="nav-link" href="/HangHoa/NhaCC">Nhà cung cấp</a>
+                                                <a class="nav-link" href="/TienIch/DonViTinh">Đơn vị tính</a> 
+                                            </nav>
+                                        </div>
+                                    </nav>
+                                </div>
+                               </div>
+                            </div>
+                        </nav>
+                    </div>
+            <div class="sidebar-brand-text" style="color:white;width:100%;text-align:center;margin-bottom:30px">Coppyright@2024<br />Tác giả: Nguyễn Minh Lai - Nguyễn Quốc Cường</div>
+        </ul>   
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- Main Content -->
+            <div id="content">
+                <!-- Topbar -->
+                <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+                    <button id="toggleSidebarButton">Thu gọn Menu</button>
+                    <button id="changeContentColorButton">Đổi màu nền</button>
+                    <button>
+                        <div class="breadcrumb-container">
+                            <ol class="breadcrumb">
+                                <li class="active">
+                                    <a href="#">@ViewContext.RouteData.Values["controller"].ToString()</a>
+                                </li>
+                            </ol>
+                        </div>
+                    </button>
+                        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
+                            <div class="input-group">
+                            </div>
+                        </form>
+                        <!-- Navbar-->
+                        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#!">Phân quyền</a></li>
+                                    <li><a class="dropdown-item" href="#!<!--/CauHinh/Index-->">Cấu hình thông số</a></li>
+                                    <li><hr class="dropdown-divider" /></li>
+                                    <li><a class="dropdown-item" href="/Home/Login">Log out</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+</nav>
+                <!-- End of Topbar -->
+                <!-- Begin Page Content -->
+                <div class="container-fluid horizontal-scroll">
+                    @RenderBody()
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+
+            <!-- End of Main Content -->
+            <!-- Footer -->
+           
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+    </div>
+    <!-- End of Page Wrapper -->
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a> 
+    <script>
+        $(document).ready(function () {
+            // Lấy trạng thái ẩn từ localStorage nếu đã lưu trữ trước đó
+            var isSidebarHidden = localStorage.getItem('sidebarHidden');
+            // Function để ẩn sidebar
+            function hideSidebar() {
+                $('#accordionSidebar').addClass('toggled');
+            }
+            // Function để hiện sidebar
+            function showSidebar() {
+                $('#accordionSidebar').removeClass('toggled');
+            }
+            // Nếu trạng thái ẩn được lưu trữ và là 'true', ẩn sidebar khi tải trang
+            if (isSidebarHidden === 'true') {
+                hideSidebar();
+            }
+            // Function để ẩn footer
+            function hideFooter() {
+                $('#left-top-footer-wrapper').hide();
+            }
+            // Function để hiện footer
+            function showFooter() {
+                $('#left-top-footer-wrapper').show();
+            }
+            // Nếu trạng thái ẩn được lưu trữ và là 'true', ẩn sidebar khi tải trang
+            if (isSidebarHidden === 'true') {
+                hideSidebar();
+            }
+            // Xử lý sự kiện click nút Ẩn/Hiện Sidebar
+            $('#toggleSidebarButton').on('click', function () {
+                $('#accordionSidebar').toggleClass('toggled');
+                // Lưu trạng thái ẩn vào localStorage
+                var isHidden = $('#accordionSidebar').hasClass('toggled');
+                localStorage.setItem('sidebarHidden', isHidden);
+
+                // Cập nhật trạng thái sidebar ngay sau khi thay đổi
+                if (isHidden) {
+                    hideSidebar();
+                    hideFooter();
+                } else {
+                    showSidebar();
+                    showFooter();
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            // Xử lý sự kiện click trên các liên kết trong sidebar
+            $('.nav-link').on('click', function (e) {
+                // Ngăn chặn hành động mặc định của liên kết
+                // Lấy thông tin từ liên kết được click
+                var controller = $(this).text().trim(); // Tên controller
+                var action = 'Index'; // Action mặc định
+                // Cập nhật topbar
+                updateTopbar(controller, action);
+            });
+            // Xử lý sự kiện click trên các liên kết trong topbar
+            $(document).on('click', '#breadcrumb-container a', function (e) {
+                e.preventDefault(); // Ngăn chặn hành động mặc định của liên kết
+                // Lấy thông tin từ liên kết được click
+                var controller = $(this).text().trim(); // Tên controller
+                var action = ViewContext.RouteData.Values["action"].ToString(); // Action hiện tại
+                // Cập nhật topbar
+                updateTopbar(controller, action);
+            });
+            // Hàm cập nhật topbar
+            function updateTopbar(controller, action) {
+                var breadcrumb = '<ol class="breadcrumb">' + '<li>' + '<a href="/Home/Index"></a>' + '</li>' + '<li>' + '<a href="/' + controller + '/">' + controller + '</a>' + '</li>' + '<li class="active">' + '<a href="#">' + action + '</a>' + '</li>' + '</ol>';
+                // Thay đổi nội dung của topbar
+                $('#breadcrumb-container').html(breadcrumb);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            var contentArea = document.getElementById("content");
+            var containerFluid = document.querySelector('.container-fluid');
+            // Lấy màu nền từ localStorage nếu có
+            var savedColor = localStorage.getItem('backgroundColor');
+            // Áp dụng màu nền từ localStorage nếu đã lưu trữ trước đó
+            if (savedColor === 'dark') {
+                contentArea.classList.remove("bg-white");
+                contentArea.classList.add("bg-dark");
+                contentArea.style.color = "#ffffff"; // Màu chữ trắng
+                containerFluid.style.backgroundColor = "inherit"; // Sử dụng màu nền mặc định của container-fluid
+            } else if (savedColor === 'light') {
+                contentArea.classList.remove("bg-dark");
+                contentArea.classList.add("bg-white");
+                contentArea.style.color = "#000000"; // Màu chữ đen
+                containerFluid.style.backgroundColor = "#ffffff"; // Màu nền trắng
+            } else {
+                // Nếu không có giá trị lưu trữ, lưu màu nền mặc định vào localStorage khi trang được tải lần đầu
+                localStorage.setItem('backgroundColor', contentArea.classList.contains('bg-dark') ? 'dark' : 'light');
+            }
+            document.getElementById("changeContentColorButton").addEventListener("click", function () {
+                if (contentArea.classList.contains("bg-dark")) {
+                    contentArea.classList.remove("bg-dark");
+                    contentArea.classList.add("bg-white");
+                    contentArea.style.color = "#000000"; // Màu chữ đen
+                    containerFluid.style.backgroundColor = "#ffffff"; // Màu nền trắng
+                } else {
+                    contentArea.classList.remove("bg-white");
+                    contentArea.classList.add("bg-dark");
+                    contentArea.style.color = "#ffffff"; // Màu chữ trắng
+                    containerFluid.style.backgroundColor = "inherit"; // Sử dụng màu nền mặc định của container-fluid
+                }
+                // Lưu màu nền sau khi thay đổi vào localStorage
+                localStorage.setItem('backgroundColor', contentArea.classList.contains('bg-dark') ? 'dark' : 'light');
+            });
+        });
+    </script>
+</body>
+</html>

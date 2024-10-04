@@ -1,0 +1,48 @@
+{% extends 'page/layout.html' %}
+{% block content %}
+<div class="container mt-4">
+    <div class="row justify-content-between align-items-center">
+        <div class="col-md-6">
+            <h1 class="text-center mb-4">DANH SÁCH SẢN PHẨM</h1>
+        </div>
+        <div class="col-md-6 text-right">
+            <a href="{% url 'admin' %}" class="btn btn-primary">Trở về</a>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <p>Có {{ san_pham_list|length }} sản phẩm</p>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Mã sản phẩm</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Mô tả</th>
+                        <th>Giá</th>
+                        <th>Số lượng</th>
+                        <th>Danh mục</th>
+                        <th>Hình ảnh</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for san_pham in san_pham_list %}
+                    <tr>
+                        <td>{{ san_pham.ma_san_pham }}</td>
+                        <td>{{ san_pham.ten_san_pham }}</td>
+                        <td>{{ san_pham.mo_ta }}</td>
+                        <td>{{ san_pham.gia }}</td>
+                        <td>{{ san_pham.so_luong }}</td>
+                        <td>{{ san_pham.ma_danh_muc.ten_danh_muc }}</td>
+                        <td><img src="{{ san_pham.hinh_anh_url }}" alt="{{ san_pham.hinh_anh_url }}" width="100"></td>
+                        <td>
+                            <a href="{% url 'xoa_san_pham' san_pham.ma_san_pham %}" class="btn btn-danger">Xóa</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}

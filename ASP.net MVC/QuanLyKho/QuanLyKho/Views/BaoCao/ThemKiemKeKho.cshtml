@@ -1,0 +1,117 @@
+﻿@model QuanLyKho.Models.tblkiemkekho
+@{
+    ViewBag.Title = "Kiểm kê kho";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<style>
+    /* CSS để label và textbox nằm ngang và gần nhau */
+    .form-horizontal .form-group {
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+
+    .form-horizontal .control-label {
+        width: 70%;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .form-horizontal .col-md-10 {
+        width: 70%;
+    }
+
+    .form-horizontal input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Tùy chỉnh giao diện của nút */
+    .btn-custom {
+        background-color: #007bff; /* Màu nền của nút "Thêm" */
+        border: 1px solid #ccc;
+        padding: 8px 15px;
+        color: white;
+        border-radius: 5px;
+        text-align: center;
+        display: inline-block;
+        margin: 10px;
+    }
+
+    /* Định dạng div để căn giữa trên màn hình */
+    .center-content {
+        text-align: center;
+        margin: 0 auto;
+        width: 50%; /* Điều chỉnh chiều rộng của div nếu cần thiết */
+    }
+    .popup-text {
+        background-color: rgba(255, 255, 255, 0); /* Màu nền trong suốt */
+        color: red; /* Màu chữ đỏ */
+    }
+</style>
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <h2 style="text-align:center">Kiểm kê kho</h2>
+            @using (Html.BeginForm("ThemKiemKeKho", "BaoCao", FormMethod.Post, new { id = "addForm", onsubmit = "return validateForm()" }))
+            {
+                @Html.AntiForgeryToken()
+                    <hr />
+                    @Html.ValidationSummary(true)
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.noidung, "Nội dung:", new { @class = "control-label" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.noidung, new { id = "noidung", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.noidung)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.nguoikiemke, "Người kiểm kê:", new { @class = "control-label" })
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.nguoikiemke, new { id = "nguoikiemke", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.nguoikiemke)
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        @Html.LabelFor(model => model.idkho, "Kho", new { @class = "control-label col-md-5" })
+                        <div class="col-md-5">
+                            @Html.DropDownListFor(model => model.idkho, ViewBag.kiemkekho as SelectList, new { id = "idkho", @class = "form-control" })
+                            @Html.ValidationMessageFor(model => model.idkho)
+                        </div>
+                    </div>
+                    <div class="form-group text-center">
+                        <div class="col-md-offset-2 col-md-9">
+                            <input type="submit" value="Quét QR" class="btn-custom" />
+                        </div>
+                    </div>
+    <div class="col-md-10">
+        @Html.ActionLink("Trở lại", "KiemKeKho", "BaoCao")
+    </div>
+            }
+        </div>
+        </div>
+    </div>
+        <div id="custom-popup" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background-color: #fff; padding: 20px; border: 1px solid #ccc; z-index: 9999; text-align: center;">
+    <p id="custom-popup-text" class="popup-text" style="font-size: 18px; margin-bottom: 20px;"></p>
+    <button onclick="closeCustomPopup()" style="background-color: #007bff; color: white; border: none; padding: 10px 20px; cursor: pointer; font-size: 16px; border-radius: 4px; transition: background-color 0.3s;">OK</button>
+</div>
+        <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+        <script src="~/Scripts/jquery.validate.min.js"></script>
+        <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+ <script>
+    function closeCustomPopup() {
+        document.getElementById("custom-popup").style.display = "none";
+    }
+
+    function validateForm() {
+        var noidungValue = document.getElementById("noidung").value;
+        var nguoikiemkeValue = document.getElementById("nguoikiemke").value;
+        if (noidungValue.trim() === '' || nguoikiemkeValue.trim() === '') {
+            document.getElementById("custom-popup-text").innerHTML = "Vui lòng điền đầy đủ thông tin";
+            document.getElementById("custom-popup").style.display = "block";
+            return false; // Ngăn không cho form submit nếu có trường trống
+        }
+        return true; // Cho phép submit nếu tất cả các trường đã được điền đầy đủ
+    }
+</script>
+

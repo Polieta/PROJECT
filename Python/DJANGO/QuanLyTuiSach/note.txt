@@ -1,0 +1,1 @@
+Thiết kế database, Thêm sản phẩm, Đổ dữ liệu từ db lên trang Admin, Trang chủ, Quản lý hóa đơn, tìm kiếm sản phẩm, danh mục

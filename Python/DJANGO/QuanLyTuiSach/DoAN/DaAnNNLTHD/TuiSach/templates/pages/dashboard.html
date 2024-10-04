@@ -1,0 +1,56 @@
+{% extends "page/layout.html" %}
+{% block title %}
+Home
+{% endblock %}
+{% block content %}
+<div class="menu-dashboard">
+    <div class="container-fluid">
+        <div class="row flex-nowrap">
+            <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-light">
+                <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+                    <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start"
+                        id="menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0" style="background-color: white;">
+                                <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Trang chủ</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0" style="background-color: white;">
+                                <i class="fs-4 bi bi-folder-plus"></i> <span class="ms-1 d-none d-sm-inline">Sản phẩm</span>
+                            </a>
+                        </li>
+                        <!-- <li class="nav-item">
+                            <a href="#" class="nav-link align-middle px-0" style="background-color: white;">
+                                <i class="fs-4 bi bi-bag-plus-fill"></i> <span class="ms-1 d-none d-sm-inline">Danh mục</span>
+                            </a>
+                        </li> -->
+                        <li class="nav-item">
+                            <a href="#submenu3" data-bs-toggle="collapse" class="nav-link px-0 align-middle" style="background-color: white;" >
+                                <i class="fs-4 bi-grid"></i> <span class="ms-1 d-none d-sm-inline">Danh mục</span> </a>
+                                <ul class="collapse nav flex-column ms-1" id="submenu3" data-bs-parent="#menu" >
+                                <li class="w-100" >
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 1</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 2</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 3</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="nav-link px-0"> <span class="d-none d-sm-inline">Product</span> 4</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col py-3">
+                <h1>Đây là trang Dashboard</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

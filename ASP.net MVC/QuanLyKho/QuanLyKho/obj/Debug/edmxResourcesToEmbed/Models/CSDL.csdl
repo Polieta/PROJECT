@@ -1,0 +1,1094 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QuanLyKho_HongLamModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblcongty">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ma" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="diachi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="msthue" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tbldangnh__idCon__4CA06362" FromRole="tblcongty" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tbldvt" Relationship="Self.FK__tbldvt__idcongty__6477ECF3" FromRole="tblcongty" ToRole="tbldvt" />
+    <NavigationProperty Name="tblhanghoa" Relationship="Self.FK__tblhangho__idcon__6D0D32F4" FromRole="tblcongty" ToRole="tblhanghoa" />
+    <NavigationProperty Name="tblkiemkekho" Relationship="Self.FK__tblkiemke__idcon__01142BA1" FromRole="tblcongty" ToRole="tblkiemkekho" />
+    <NavigationProperty Name="tblkho" Relationship="Self.FK__tblkho__idcongty__52593CB8" FromRole="tblcongty" ToRole="tblkho" />
+    <NavigationProperty Name="tblloaihang" Relationship="Self.FK__tblloaiha__idcon__5EBF139D" FromRole="tblcongty" ToRole="tblloaihang" />
+    <NavigationProperty Name="tbllydoxuat" Relationship="Self.FK__tbllydoxu__idcon__2A164134" FromRole="tblcongty" ToRole="tbllydoxuat" />
+    <NavigationProperty Name="tblnhacc" Relationship="Self.FK__tblnhacc__idcong__72C60C4A" FromRole="tblcongty" ToRole="tblnhacc" />
+    <NavigationProperty Name="tblnhomhang" Relationship="Self.FK__tblnhomha__idcon__5812160E" FromRole="tblcongty" ToRole="tblnhomhang" />
+    <NavigationProperty Name="tblphieunhapkho" Relationship="Self.FK__tblphieun__idcon__06CD04F7" FromRole="tblcongty" ToRole="tblphieunhapkho" />
+    <NavigationProperty Name="tblphieunhapkhoct" Relationship="Self.FK__tblphieun__idcon__0E6E26BF" FromRole="tblcongty" ToRole="tblphieunhapkhoct" />
+    <NavigationProperty Name="tblphieuxuatkho" Relationship="Self.FK__tblphieux__idcon__59C55456" FromRole="tblcongty" ToRole="tblphieuxuatkho" />
+    <NavigationProperty Name="tbltaotem" Relationship="Self.FK__tbltaotem__idcon__7C4F7684" FromRole="tblcongty" ToRole="tbltaotem" />
+    <NavigationProperty Name="tbltonkhoth" Relationship="Self.FK__tbltonkho__idcon__245D67DE" FromRole="tblcongty" ToRole="tbltonkhoth" />
+    <NavigationProperty Name="tbltonkhoct" Relationship="Self.FK__tbltonkho__idcon__55009F39" FromRole="tblcongty" ToRole="tbltonkhoct" />
+  </EntityType>
+  <EntityType Name="tbldangnhap">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="password" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="idCongTy" Type="Int32" Nullable="false" />
+    <Property Name="hide" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tbldangnh__idCon__4CA06362" FromRole="tbldangnhap" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldvt" Relationship="Self.FK__tbldvt__userid__6383C8BA" FromRole="tbldangnhap" ToRole="tbldvt" />
+    <NavigationProperty Name="tblhanghoa" Relationship="Self.FK__tblhangho__useri__6C190EBB" FromRole="tbldangnhap" ToRole="tblhanghoa" />
+    <NavigationProperty Name="tblkiemkekho" Relationship="Self.FK__tblkiemke__useri__02FC7413" FromRole="tbldangnhap" ToRole="tblkiemkekho" />
+    <NavigationProperty Name="tblkho" Relationship="Self.FK__tblkho__userid__5165187F" FromRole="tbldangnhap" ToRole="tblkho" />
+    <NavigationProperty Name="tblloaihang" Relationship="Self.FK__tblloaiha__useri__5DCAEF64" FromRole="tbldangnhap" ToRole="tblloaihang" />
+    <NavigationProperty Name="tbllydoxuat" Relationship="Self.FK__tbllydoxu__useri__29221CFB" FromRole="tbldangnhap" ToRole="tbllydoxuat" />
+    <NavigationProperty Name="tblnhacc" Relationship="Self.FK__tblnhacc__userid__71D1E811" FromRole="tbldangnhap" ToRole="tblnhacc" />
+    <NavigationProperty Name="tblnhomhang" Relationship="Self.FK__tblnhomha__useri__571DF1D5" FromRole="tbldangnhap" ToRole="tblnhomhang" />
+    <NavigationProperty Name="tblphieunhapkho" Relationship="Self.FK__tblphieun__useri__08B54D69" FromRole="tbldangnhap" ToRole="tblphieunhapkho" />
+    <NavigationProperty Name="tblphieuxuatkho" Relationship="Self.FK__tblphieux__useri__5BAD9CC8" FromRole="tbldangnhap" ToRole="tblphieuxuatkho" />
+    <NavigationProperty Name="tbltaotem" Relationship="Self.FK__tbltaotem__useri__7B5B524B" FromRole="tbldangnhap" ToRole="tbltaotem" />
+  </EntityType>
+  <EntityType Name="tbldvt">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ma" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tbldvt__idcongty__6477ECF3" FromRole="tbldvt" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tbldvt__userid__6383C8BA" FromRole="tbldvt" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tblhanghoa" Relationship="Self.FK__tblhanghoa__dvt__693CA210" FromRole="tbldvt" ToRole="tblhanghoa" />
+  </EntityType>
+  <EntityType Name="tblhanghoa">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ma" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="mota" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="dvt" Type="Int32" Nullable="false" />
+    <Property Name="nhomhang" Type="Int32" Nullable="false" />
+    <Property Name="loaihang" Type="Int32" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tblhangho__idcon__6D0D32F4" FromRole="tblhanghoa" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tblhangho__useri__6C190EBB" FromRole="tblhanghoa" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tbldvt" Relationship="Self.FK__tblhanghoa__dvt__693CA210" FromRole="tblhanghoa" ToRole="tbldvt" />
+    <NavigationProperty Name="tblloaihang" Relationship="Self.FK__tblhangho__loaih__6B24EA82" FromRole="tblhanghoa" ToRole="tblloaihang" />
+    <NavigationProperty Name="tblnhomhang" Relationship="Self.FK__tblhangho__nhomh__6A30C649" FromRole="tblhanghoa" ToRole="tblnhomhang" />
+    <NavigationProperty Name="tblkiemkeCTkho" Relationship="Self.FK__tblkiemke__mahan__3C34F16F" FromRole="tblhanghoa" ToRole="tblkiemkeCTkho" />
+    <NavigationProperty Name="tblphieuxuatkhoct" Relationship="Self.FK__tblphieux__mahan__5F7E2DAC" FromRole="tblhanghoa" ToRole="tblphieuxuatkhoct" />
+  </EntityType>
+  <EntityType Name="tblkiemkeCTkho">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="mahang" />
+      <PropertyRef Name="solo" />
+      <PropertyRef Name="HSD" />
+      <PropertyRef Name="sl" />
+      <PropertyRef Name="nsx" />
+      <PropertyRef Name="loaihang" />
+      <PropertyRef Name="ngayud" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="mahang" Type="Int32" Nullable="false" />
+    <Property Name="solo" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HSD" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="sl" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="nsx" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="loaihang" Type="Int32" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="sttton" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblhanghoa" Relationship="Self.FK__tblkiemke__mahan__3C34F16F" FromRole="tblkiemkeCTkho" ToRole="tblhanghoa" />
+    <NavigationProperty Name="tblloaihang" Relationship="Self.FK__tblkiemke__loaih__3D2915A8" FromRole="tblkiemkeCTkho" ToRole="tblloaihang" />
+    <NavigationProperty Name="tblkiemkekho" Relationship="Self.FK__tblkiemkeCTk__id__3E1D39E1" FromRole="tblkiemkeCTkho" ToRole="tblkiemkekho" />
+  </EntityType>
+  <EntityType Name="tblkiemkekho">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="mmyyyy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="noidung" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nguoikiemke" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idkho" Type="Int32" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tblkiemke__idcon__01142BA1" FromRole="tblkiemkekho" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tblkiemke__useri__02FC7413" FromRole="tblkiemkekho" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tblkiemkeCTkho" Relationship="Self.FK__tblkiemkeCTk__id__3E1D39E1" FromRole="tblkiemkekho" ToRole="tblkiemkeCTkho" />
+    <NavigationProperty Name="tblkho" Relationship="Self.FK__tblkiemke__idkho__02084FDA" FromRole="tblkiemkekho" ToRole="tblkho" />
+  </EntityType>
+  <EntityType Name="tblkho">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ma" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tblkho__idcongty__52593CB8" FromRole="tblkho" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tblkho__userid__5165187F" FromRole="tblkho" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tblkiemkekho" Relationship="Self.FK__tblkiemke__idkho__02084FDA" FromRole="tblkho" ToRole="tblkiemkekho" />
+    <NavigationProperty Name="tblphieunhapkho" Relationship="Self.FK__tblphieun__idkho__07C12930" FromRole="tblkho" ToRole="tblphieunhapkho" />
+    <NavigationProperty Name="tblphieuxuatkho" Relationship="Self.FK__tblphieux__idkho__5AB9788F" FromRole="tblkho" ToRole="tblphieuxuatkho" />
+    <NavigationProperty Name="tbltonkhoth" Relationship="Self.FK__tbltonkho__idkho__1EA48E88" FromRole="tblkho" ToRole="tbltonkhoth" />
+    <NavigationProperty Name="tbltonkhoct" Relationship="Self.FK__tbltonkho__idkho__4F47C5E3" FromRole="tblkho" ToRole="tbltonkhoct" />
+  </EntityType>
+  <EntityType Name="tblloaihang">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="nhomhang" Type="Int32" Nullable="false" />
+    <Property Name="ma" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tblloaiha__idcon__5EBF139D" FromRole="tblloaihang" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tblloaiha__useri__5DCAEF64" FromRole="tblloaihang" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tblhanghoa" Relationship="Self.FK__tblhangho__loaih__6B24EA82" FromRole="tblloaihang" ToRole="tblhanghoa" />
+    <NavigationProperty Name="tblkiemkeCTkho" Relationship="Self.FK__tblkiemke__loaih__3D2915A8" FromRole="tblloaihang" ToRole="tblkiemkeCTkho" />
+    <NavigationProperty Name="tblnhomhang" Relationship="Self.FK__tblloaiha__nhomh__5CD6CB2B" FromRole="tblloaihang" ToRole="tblnhomhang" />
+    <NavigationProperty Name="tbltaotem" Relationship="Self.FK__tbltaotem__loaih__797309D9" FromRole="tblloaihang" ToRole="tbltaotem" />
+  </EntityType>
+  <EntityType Name="tbllydoxuat">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ma" Type="Int32" />
+    <Property Name="ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tbllydoxu__idcon__2A164134" FromRole="tbllydoxuat" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tbllydoxu__useri__29221CFB" FromRole="tbllydoxuat" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tblphieuxuatkho" Relationship="Self.FK__tblphieux__idlyd__5CA1C101" FromRole="tbllydoxuat" ToRole="tblphieuxuatkho" />
+  </EntityType>
+  <EntityType Name="tblnhacc">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ma" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="loai" Type="Int32" />
+    <Property Name="diachi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="sdt" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="fax" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="mota" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tblnhacc__idcong__72C60C4A" FromRole="tblnhacc" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tblnhacc__userid__71D1E811" FromRole="tblnhacc" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tbltaotem" Relationship="Self.FK__tbltaotem__nhacc__7A672E12" FromRole="tblnhacc" ToRole="tbltaotem" />
+  </EntityType>
+  <EntityType Name="tblnhomhang">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" />
+    <Property Name="ma" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="ten" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tblnhomha__idcon__5812160E" FromRole="tblnhomhang" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tblnhomha__useri__571DF1D5" FromRole="tblnhomhang" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tblhanghoa" Relationship="Self.FK__tblhangho__nhomh__6A30C649" FromRole="tblnhomhang" ToRole="tblhanghoa" />
+    <NavigationProperty Name="tblloaihang" Relationship="Self.FK__tblloaiha__nhomh__5CD6CB2B" FromRole="tblnhomhang" ToRole="tblloaihang" />
+  </EntityType>
+  <EntityType Name="tblphieunhapkho">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="ma" Type="Int32" Nullable="false" />
+    <Property Name="nguoinhapphieu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nguoigiaohang" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="diachi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="masothue" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="diengiai" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idkho" Type="Int32" Nullable="false" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="3" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tblphieun__idcon__06CD04F7" FromRole="tblphieunhapkho" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tblphieun__useri__08B54D69" FromRole="tblphieunhapkho" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tblkho" Relationship="Self.FK__tblphieun__idkho__07C12930" FromRole="tblphieunhapkho" ToRole="tblkho" />
+    <NavigationProperty Name="tblphieunhapkhoct" Relationship="Self.FK__tblphieunhap__id__0D7A0286" FromRole="tblphieunhapkho" ToRole="tblphieunhapkhoct" />
+  </EntityType>
+  <EntityType Name="tblphieunhapkhoct">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="mahanghoa" />
+      <PropertyRef Name="stt" />
+      <PropertyRef Name="lot" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="mahanghoa" Type="Int32" Nullable="false" />
+    <Property Name="stt" Type="Int32" Nullable="false" />
+    <Property Name="hsd" Type="DateTime" Precision="7" />
+    <Property Name="dvt" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <Property Name="soluong" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+    <Property Name="dongia" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="thanhtien" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ngayud" Type="DateTime" Precision="3" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <Property Name="nsx" Type="DateTime" Precision="7" />
+    <Property Name="lot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tblphieun__idcon__0E6E26BF" FromRole="tblphieunhapkhoct" ToRole="tblcongty" />
+    <NavigationProperty Name="tblphieunhapkho" Relationship="Self.FK__tblphieunhap__id__0D7A0286" FromRole="tblphieunhapkhoct" ToRole="tblphieunhapkho" />
+    <Property Name="maphieu" Type="Decimal" Precision="20" Scale="0" />
+  </EntityType>
+  <EntityType Name="tblphieuxuatkho">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="ma" Type="Int32" Nullable="false" />
+    <Property Name="nguoixuatphieu" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nguoinhanhang" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="diachi" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="idlydoxuat" Type="Int32" Nullable="false" />
+    <Property Name="idkho" Type="Int32" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="3" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tblphieux__idcon__59C55456" FromRole="tblphieuxuatkho" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tblphieux__useri__5BAD9CC8" FromRole="tblphieuxuatkho" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tblkho" Relationship="Self.FK__tblphieux__idkho__5AB9788F" FromRole="tblphieuxuatkho" ToRole="tblkho" />
+    <NavigationProperty Name="tbllydoxuat" Relationship="Self.FK__tblphieux__idlyd__5CA1C101" FromRole="tblphieuxuatkho" ToRole="tbllydoxuat" />
+  </EntityType>
+  <EntityType Name="tblphieuxuatkhoct">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="mahanghoa" />
+      <PropertyRef Name="stt" />
+      <PropertyRef Name="solo" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="mahanghoa" Type="Int32" Nullable="false" />
+    <Property Name="tenhanghoa" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="stt" Type="Int32" Nullable="false" />
+    <Property Name="solo" Type="Int32" Nullable="false" />
+    <Property Name="hsd" Type="DateTime" Precision="7" />
+    <Property Name="dvt" Type="String" MaxLength="100" FixedLength="true" Unicode="true" Nullable="false" />
+    <Property Name="soluong" Type="Int32" Nullable="false" />
+    <Property Name="dongia" Type="Double" Nullable="false" />
+    <Property Name="thanhtien" Type="Double" Nullable="false" />
+    <NavigationProperty Name="tblhanghoa" Relationship="Self.FK__tblphieux__mahan__5F7E2DAC" FromRole="tblphieuxuatkhoct" ToRole="tblhanghoa" />
+  </EntityType>
+  <EntityType Name="tbltaotem">
+    <Key>
+      <PropertyRef Name="ma" />
+      <PropertyRef Name="lot" />
+      <PropertyRef Name="loaihang" />
+      <PropertyRef Name="nhacc" />
+      <PropertyRef Name="ImageName" />
+    </Key>
+    <Property Name="ma" Type="Int32" Nullable="false" />
+    <Property Name="lot" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="nsx" Type="DateTime" Precision="7" />
+    <Property Name="hsd" Type="DateTime" Precision="7" />
+    <Property Name="loaihang" Type="Int32" Nullable="false" />
+    <Property Name="nhacc" Type="Int32" Nullable="false" />
+    <Property Name="sltem" Type="Int32" />
+    <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ImageName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ngayud" Type="DateTime" Precision="0" />
+    <Property Name="userid" Type="Int32" />
+    <Property Name="hide" Type="Int32" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tbltaotem__idcon__7C4F7684" FromRole="tbltaotem" ToRole="tblcongty" />
+    <NavigationProperty Name="tbldangnhap" Relationship="Self.FK__tbltaotem__useri__7B5B524B" FromRole="tbltaotem" ToRole="tbldangnhap" />
+    <NavigationProperty Name="tblloaihang" Relationship="Self.FK__tbltaotem__loaih__797309D9" FromRole="tbltaotem" ToRole="tblloaihang" />
+    <NavigationProperty Name="tblnhacc" Relationship="Self.FK__tbltaotem__nhacc__7A672E12" FromRole="tbltaotem" ToRole="tblnhacc" />
+  </EntityType>
+  <EntityType Name="tbltonkhoct">
+    <Key>
+      <PropertyRef Name="id" />
+      <PropertyRef Name="idkho" />
+      <PropertyRef Name="mahanghoa" />
+      <PropertyRef Name="solo" />
+    </Key>
+    <Property Name="id" Type="Decimal" Precision="20" Scale="0" Nullable="false" />
+    <Property Name="idkho" Type="Int32" Nullable="false" />
+    <Property Name="idn" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="idx" Type="Decimal" Precision="20" Scale="0" />
+    <Property Name="mahanghoa" Type="Int32" Nullable="false" />
+    <Property Name="solo" Type="Int32" Nullable="false" />
+    <Property Name="hsd" Type="DateTime" Precision="7" />
+    <Property Name="tondau" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="sln" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="slx" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ngayud" Type="DateTime" Precision="3" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <Property Name="idnguoikk" Type="Decimal" Precision="20" Scale="0" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tbltonkho__idcon__55009F39" FromRole="tbltonkhoct" ToRole="tblcongty" />
+    <NavigationProperty Name="tblkho" Relationship="Self.FK__tbltonkho__idkho__4F47C5E3" FromRole="tbltonkhoct" ToRole="tblkho" />
+  </EntityType>
+  <EntityType Name="tbltonkhoth">
+    <Key>
+      <PropertyRef Name="idkho" />
+      <PropertyRef Name="mahanghoa" />
+    </Key>
+    <Property Name="idkho" Type="Int32" Nullable="false" />
+    <Property Name="mahanghoa" Type="Int32" Nullable="false" />
+    <Property Name="tondau" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="sln" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="slx" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="ngayud" Type="DateTime" Precision="3" />
+    <Property Name="idcongty" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="tblcongty" Relationship="Self.FK__tbltonkho__idcon__245D67DE" FromRole="tbltonkhoth" ToRole="tblcongty" />
+    <NavigationProperty Name="tblkho" Relationship="Self.FK__tbltonkho__idkho__1EA48E88" FromRole="tbltonkhoth" ToRole="tblkho" />
+  </EntityType>
+  <Association Name="FK__tbldangnh__idCon__4CA06362">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbldangnhap">
+        <PropertyRef Name="idCongTy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbldvt__idcongty__6477ECF3">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tbldvt" Type="Self.tbldvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbldvt">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblhangho__idcon__6D0D32F4">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tblhanghoa" Type="Self.tblhanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblhanghoa">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblkiemke__idcon__01142BA1">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tblkiemkekho" Type="Self.tblkiemkekho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblkiemkekho">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblkho__idcongty__52593CB8">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tblkho" Type="Self.tblkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblkho">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblloaiha__idcon__5EBF139D">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tblloaihang" Type="Self.tblloaihang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblloaihang">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbllydoxu__idcon__2A164134">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tbllydoxuat" Type="Self.tbllydoxuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbllydoxuat">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblnhacc__idcong__72C60C4A">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tblnhacc" Type="Self.tblnhacc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblnhacc">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblnhomha__idcon__5812160E">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tblnhomhang" Type="Self.tblnhomhang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblnhomhang">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieun__idcon__06CD04F7">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tblphieunhapkho" Type="Self.tblphieunhapkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieunhapkho">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieun__idcon__0E6E26BF">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tblphieunhapkhoct" Type="Self.tblphieunhapkhoct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieunhapkhoct">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieux__idcon__59C55456">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tblphieuxuatkho" Type="Self.tblphieuxuatkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieuxuatkho">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbltaotem__idcon__7C4F7684">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tbltaotem" Type="Self.tbltaotem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbltaotem">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbltonkho__idcon__245D67DE">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tbltonkhoth" Type="Self.tbltonkhoth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbltonkhoth">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbltonkho__idcon__55009F39">
+    <End Role="tblcongty" Type="Self.tblcongty" Multiplicity="1" />
+    <End Role="tbltonkhoct" Type="Self.tbltonkhoct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblcongty">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbltonkhoct">
+        <PropertyRef Name="idcongty" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbldvt__userid__6383C8BA">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tbldvt" Type="Self.tbldvt" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbldvt">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblhangho__useri__6C190EBB">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tblhanghoa" Type="Self.tblhanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblhanghoa">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblkiemke__useri__02FC7413">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tblkiemkekho" Type="Self.tblkiemkekho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblkiemkekho">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblkho__userid__5165187F">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tblkho" Type="Self.tblkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblkho">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblloaiha__useri__5DCAEF64">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tblloaihang" Type="Self.tblloaihang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblloaihang">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbllydoxu__useri__29221CFB">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tbllydoxuat" Type="Self.tbllydoxuat" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbllydoxuat">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblnhacc__userid__71D1E811">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tblnhacc" Type="Self.tblnhacc" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblnhacc">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblnhomha__useri__571DF1D5">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tblnhomhang" Type="Self.tblnhomhang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblnhomhang">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieun__useri__08B54D69">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tblphieunhapkho" Type="Self.tblphieunhapkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieunhapkho">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieux__useri__5BAD9CC8">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tblphieuxuatkho" Type="Self.tblphieuxuatkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieuxuatkho">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbltaotem__useri__7B5B524B">
+    <End Role="tbldangnhap" Type="Self.tbldangnhap" Multiplicity="0..1" />
+    <End Role="tbltaotem" Type="Self.tbltaotem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldangnhap">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbltaotem">
+        <PropertyRef Name="userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblhanghoa__dvt__693CA210">
+    <End Role="tbldvt" Type="Self.tbldvt" Multiplicity="1" />
+    <End Role="tblhanghoa" Type="Self.tblhanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbldvt">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblhanghoa">
+        <PropertyRef Name="dvt" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblhangho__loaih__6B24EA82">
+    <End Role="tblloaihang" Type="Self.tblloaihang" Multiplicity="1" />
+    <End Role="tblhanghoa" Type="Self.tblhanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblloaihang">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblhanghoa">
+        <PropertyRef Name="loaihang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblhangho__nhomh__6A30C649">
+    <End Role="tblnhomhang" Type="Self.tblnhomhang" Multiplicity="1" />
+    <End Role="tblhanghoa" Type="Self.tblhanghoa" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblnhomhang">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblhanghoa">
+        <PropertyRef Name="nhomhang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblkiemke__mahan__3C34F16F">
+    <End Role="tblhanghoa" Type="Self.tblhanghoa" Multiplicity="1" />
+    <End Role="tblkiemkeCTkho" Type="Self.tblkiemkeCTkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblhanghoa">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblkiemkeCTkho">
+        <PropertyRef Name="mahang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieux__mahan__5F7E2DAC">
+    <End Role="tblhanghoa" Type="Self.tblhanghoa" Multiplicity="1" />
+    <End Role="tblphieuxuatkhoct" Type="Self.tblphieuxuatkhoct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblhanghoa">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieuxuatkhoct">
+        <PropertyRef Name="mahanghoa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblkiemke__loaih__3D2915A8">
+    <End Role="tblloaihang" Type="Self.tblloaihang" Multiplicity="1" />
+    <End Role="tblkiemkeCTkho" Type="Self.tblkiemkeCTkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblloaihang">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblkiemkeCTkho">
+        <PropertyRef Name="loaihang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblkiemkeCTk__id__3E1D39E1">
+    <End Role="tblkiemkekho" Type="Self.tblkiemkekho" Multiplicity="1" />
+    <End Role="tblkiemkeCTkho" Type="Self.tblkiemkeCTkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblkiemkekho">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblkiemkeCTkho">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblkiemke__idkho__02084FDA">
+    <End Role="tblkho" Type="Self.tblkho" Multiplicity="1" />
+    <End Role="tblkiemkekho" Type="Self.tblkiemkekho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblkho">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblkiemkekho">
+        <PropertyRef Name="idkho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieun__idkho__07C12930">
+    <End Role="tblkho" Type="Self.tblkho" Multiplicity="1" />
+    <End Role="tblphieunhapkho" Type="Self.tblphieunhapkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblkho">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieunhapkho">
+        <PropertyRef Name="idkho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieux__idkho__5AB9788F">
+    <End Role="tblkho" Type="Self.tblkho" Multiplicity="1" />
+    <End Role="tblphieuxuatkho" Type="Self.tblphieuxuatkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblkho">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieuxuatkho">
+        <PropertyRef Name="idkho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbltonkho__idkho__1EA48E88">
+    <End Role="tblkho" Type="Self.tblkho" Multiplicity="1" />
+    <End Role="tbltonkhoth" Type="Self.tbltonkhoth" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblkho">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbltonkhoth">
+        <PropertyRef Name="idkho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbltonkho__idkho__4F47C5E3">
+    <End Role="tblkho" Type="Self.tblkho" Multiplicity="1" />
+    <End Role="tbltonkhoct" Type="Self.tbltonkhoct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblkho">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbltonkhoct">
+        <PropertyRef Name="idkho" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblloaiha__nhomh__5CD6CB2B">
+    <End Role="tblnhomhang" Type="Self.tblnhomhang" Multiplicity="1" />
+    <End Role="tblloaihang" Type="Self.tblloaihang" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblnhomhang">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblloaihang">
+        <PropertyRef Name="nhomhang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbltaotem__loaih__797309D9">
+    <End Role="tblloaihang" Type="Self.tblloaihang" Multiplicity="1" />
+    <End Role="tbltaotem" Type="Self.tbltaotem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblloaihang">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbltaotem">
+        <PropertyRef Name="loaihang" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieux__idlyd__5CA1C101">
+    <End Role="tbllydoxuat" Type="Self.tbllydoxuat" Multiplicity="1" />
+    <End Role="tblphieuxuatkho" Type="Self.tblphieuxuatkho" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbllydoxuat">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieuxuatkho">
+        <PropertyRef Name="idlydoxuat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tbltaotem__nhacc__7A672E12">
+    <End Role="tblnhacc" Type="Self.tblnhacc" Multiplicity="1" />
+    <End Role="tbltaotem" Type="Self.tbltaotem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblnhacc">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tbltaotem">
+        <PropertyRef Name="nhacc" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__tblphieunhap__id__0D7A0286">
+    <End Role="tblphieunhapkho" Type="Self.tblphieunhapkho" Multiplicity="1" />
+    <End Role="tblphieunhapkhoct" Type="Self.tblphieunhapkhoct" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tblphieunhapkho">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="tblphieunhapkhoct">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QuanLyKho_HongLamEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblcongty" EntityType="Self.tblcongty" />
+    <EntitySet Name="tbldangnhap" EntityType="Self.tbldangnhap" />
+    <EntitySet Name="tbldvt" EntityType="Self.tbldvt" />
+    <EntitySet Name="tblhanghoa" EntityType="Self.tblhanghoa" />
+    <EntitySet Name="tblkiemkeCTkho" EntityType="Self.tblkiemkeCTkho" />
+    <EntitySet Name="tblkiemkekho" EntityType="Self.tblkiemkekho" />
+    <EntitySet Name="tblkho" EntityType="Self.tblkho" />
+    <EntitySet Name="tblloaihang" EntityType="Self.tblloaihang" />
+    <EntitySet Name="tbllydoxuat" EntityType="Self.tbllydoxuat" />
+    <EntitySet Name="tblnhacc" EntityType="Self.tblnhacc" />
+    <EntitySet Name="tblnhomhang" EntityType="Self.tblnhomhang" />
+    <EntitySet Name="tblphieunhapkho" EntityType="Self.tblphieunhapkho" />
+    <EntitySet Name="tblphieunhapkhoct" EntityType="Self.tblphieunhapkhoct" />
+    <EntitySet Name="tblphieuxuatkho" EntityType="Self.tblphieuxuatkho" />
+    <EntitySet Name="tblphieuxuatkhoct" EntityType="Self.tblphieuxuatkhoct" />
+    <EntitySet Name="tbltaotem" EntityType="Self.tbltaotem" />
+    <EntitySet Name="tbltonkhoct" EntityType="Self.tbltonkhoct" />
+    <EntitySet Name="tbltonkhoth" EntityType="Self.tbltonkhoth" />
+    <AssociationSet Name="FK__tbldangnh__idCon__4CA06362" Association="Self.FK__tbldangnh__idCon__4CA06362">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbldvt__idcongty__6477ECF3" Association="Self.FK__tbldvt__idcongty__6477ECF3">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tbldvt" EntitySet="tbldvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblhangho__idcon__6D0D32F4" Association="Self.FK__tblhangho__idcon__6D0D32F4">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tblhanghoa" EntitySet="tblhanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblkiemke__idcon__01142BA1" Association="Self.FK__tblkiemke__idcon__01142BA1">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tblkiemkekho" EntitySet="tblkiemkekho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblkho__idcongty__52593CB8" Association="Self.FK__tblkho__idcongty__52593CB8">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tblkho" EntitySet="tblkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblloaiha__idcon__5EBF139D" Association="Self.FK__tblloaiha__idcon__5EBF139D">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tblloaihang" EntitySet="tblloaihang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbllydoxu__idcon__2A164134" Association="Self.FK__tbllydoxu__idcon__2A164134">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tbllydoxuat" EntitySet="tbllydoxuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblnhacc__idcong__72C60C4A" Association="Self.FK__tblnhacc__idcong__72C60C4A">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tblnhacc" EntitySet="tblnhacc" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblnhomha__idcon__5812160E" Association="Self.FK__tblnhomha__idcon__5812160E">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tblnhomhang" EntitySet="tblnhomhang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieun__idcon__06CD04F7" Association="Self.FK__tblphieun__idcon__06CD04F7">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tblphieunhapkho" EntitySet="tblphieunhapkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieun__idcon__0E6E26BF" Association="Self.FK__tblphieun__idcon__0E6E26BF">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tblphieunhapkhoct" EntitySet="tblphieunhapkhoct" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieux__idcon__59C55456" Association="Self.FK__tblphieux__idcon__59C55456">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tblphieuxuatkho" EntitySet="tblphieuxuatkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbltaotem__idcon__7C4F7684" Association="Self.FK__tbltaotem__idcon__7C4F7684">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tbltaotem" EntitySet="tbltaotem" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbltonkho__idcon__245D67DE" Association="Self.FK__tbltonkho__idcon__245D67DE">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tbltonkhoth" EntitySet="tbltonkhoth" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbltonkho__idcon__55009F39" Association="Self.FK__tbltonkho__idcon__55009F39">
+      <End Role="tblcongty" EntitySet="tblcongty" />
+      <End Role="tbltonkhoct" EntitySet="tbltonkhoct" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbldvt__userid__6383C8BA" Association="Self.FK__tbldvt__userid__6383C8BA">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tbldvt" EntitySet="tbldvt" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblhangho__useri__6C190EBB" Association="Self.FK__tblhangho__useri__6C190EBB">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tblhanghoa" EntitySet="tblhanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblkiemke__useri__02FC7413" Association="Self.FK__tblkiemke__useri__02FC7413">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tblkiemkekho" EntitySet="tblkiemkekho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblkho__userid__5165187F" Association="Self.FK__tblkho__userid__5165187F">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tblkho" EntitySet="tblkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblloaiha__useri__5DCAEF64" Association="Self.FK__tblloaiha__useri__5DCAEF64">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tblloaihang" EntitySet="tblloaihang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbllydoxu__useri__29221CFB" Association="Self.FK__tbllydoxu__useri__29221CFB">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tbllydoxuat" EntitySet="tbllydoxuat" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblnhacc__userid__71D1E811" Association="Self.FK__tblnhacc__userid__71D1E811">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tblnhacc" EntitySet="tblnhacc" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblnhomha__useri__571DF1D5" Association="Self.FK__tblnhomha__useri__571DF1D5">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tblnhomhang" EntitySet="tblnhomhang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieun__useri__08B54D69" Association="Self.FK__tblphieun__useri__08B54D69">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tblphieunhapkho" EntitySet="tblphieunhapkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieux__useri__5BAD9CC8" Association="Self.FK__tblphieux__useri__5BAD9CC8">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tblphieuxuatkho" EntitySet="tblphieuxuatkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbltaotem__useri__7B5B524B" Association="Self.FK__tbltaotem__useri__7B5B524B">
+      <End Role="tbldangnhap" EntitySet="tbldangnhap" />
+      <End Role="tbltaotem" EntitySet="tbltaotem" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblhanghoa__dvt__693CA210" Association="Self.FK__tblhanghoa__dvt__693CA210">
+      <End Role="tbldvt" EntitySet="tbldvt" />
+      <End Role="tblhanghoa" EntitySet="tblhanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblhangho__loaih__6B24EA82" Association="Self.FK__tblhangho__loaih__6B24EA82">
+      <End Role="tblloaihang" EntitySet="tblloaihang" />
+      <End Role="tblhanghoa" EntitySet="tblhanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblhangho__nhomh__6A30C649" Association="Self.FK__tblhangho__nhomh__6A30C649">
+      <End Role="tblnhomhang" EntitySet="tblnhomhang" />
+      <End Role="tblhanghoa" EntitySet="tblhanghoa" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblkiemke__mahan__3C34F16F" Association="Self.FK__tblkiemke__mahan__3C34F16F">
+      <End Role="tblhanghoa" EntitySet="tblhanghoa" />
+      <End Role="tblkiemkeCTkho" EntitySet="tblkiemkeCTkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieux__mahan__5F7E2DAC" Association="Self.FK__tblphieux__mahan__5F7E2DAC">
+      <End Role="tblhanghoa" EntitySet="tblhanghoa" />
+      <End Role="tblphieuxuatkhoct" EntitySet="tblphieuxuatkhoct" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblkiemke__loaih__3D2915A8" Association="Self.FK__tblkiemke__loaih__3D2915A8">
+      <End Role="tblloaihang" EntitySet="tblloaihang" />
+      <End Role="tblkiemkeCTkho" EntitySet="tblkiemkeCTkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblkiemkeCTk__id__3E1D39E1" Association="Self.FK__tblkiemkeCTk__id__3E1D39E1">
+      <End Role="tblkiemkekho" EntitySet="tblkiemkekho" />
+      <End Role="tblkiemkeCTkho" EntitySet="tblkiemkeCTkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblkiemke__idkho__02084FDA" Association="Self.FK__tblkiemke__idkho__02084FDA">
+      <End Role="tblkho" EntitySet="tblkho" />
+      <End Role="tblkiemkekho" EntitySet="tblkiemkekho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieun__idkho__07C12930" Association="Self.FK__tblphieun__idkho__07C12930">
+      <End Role="tblkho" EntitySet="tblkho" />
+      <End Role="tblphieunhapkho" EntitySet="tblphieunhapkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieux__idkho__5AB9788F" Association="Self.FK__tblphieux__idkho__5AB9788F">
+      <End Role="tblkho" EntitySet="tblkho" />
+      <End Role="tblphieuxuatkho" EntitySet="tblphieuxuatkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbltonkho__idkho__1EA48E88" Association="Self.FK__tbltonkho__idkho__1EA48E88">
+      <End Role="tblkho" EntitySet="tblkho" />
+      <End Role="tbltonkhoth" EntitySet="tbltonkhoth" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbltonkho__idkho__4F47C5E3" Association="Self.FK__tbltonkho__idkho__4F47C5E3">
+      <End Role="tblkho" EntitySet="tblkho" />
+      <End Role="tbltonkhoct" EntitySet="tbltonkhoct" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblloaiha__nhomh__5CD6CB2B" Association="Self.FK__tblloaiha__nhomh__5CD6CB2B">
+      <End Role="tblnhomhang" EntitySet="tblnhomhang" />
+      <End Role="tblloaihang" EntitySet="tblloaihang" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbltaotem__loaih__797309D9" Association="Self.FK__tbltaotem__loaih__797309D9">
+      <End Role="tblloaihang" EntitySet="tblloaihang" />
+      <End Role="tbltaotem" EntitySet="tbltaotem" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieux__idlyd__5CA1C101" Association="Self.FK__tblphieux__idlyd__5CA1C101">
+      <End Role="tbllydoxuat" EntitySet="tbllydoxuat" />
+      <End Role="tblphieuxuatkho" EntitySet="tblphieuxuatkho" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tbltaotem__nhacc__7A672E12" Association="Self.FK__tbltaotem__nhacc__7A672E12">
+      <End Role="tblnhacc" EntitySet="tblnhacc" />
+      <End Role="tbltaotem" EntitySet="tbltaotem" />
+    </AssociationSet>
+    <AssociationSet Name="FK__tblphieunhap__id__0D7A0286" Association="Self.FK__tblphieunhap__id__0D7A0286">
+      <End Role="tblphieunhapkho" EntitySet="tblphieunhapkho" />
+      <End Role="tblphieunhapkhoct" EntitySet="tblphieunhapkhoct" />
+    </AssociationSet>
+    <EntitySet Name="bangtamnhapkho" EntityType="QuanLyKho_HongLamModel.bangtamnhapkho" />
+  </EntityContainer>
+  <EntityType Name="bangtamnhapkho">
+    <Key>
+      <PropertyRef Name="mahanghoa" />
+      <PropertyRef Name="solo" />
+      <PropertyRef Name="maphieu" />
+      <PropertyRef Name="stt" />
+    </Key>
+    <Property Name="mahanghoa" Type="Int32" Nullable="false" />
+    <Property Name="solo" Type="Int32" Nullable="false" />
+    <Property Name="nsx" Type="DateTime" Precision="7" />
+    <Property Name="hsd" Type="DateTime" Precision="7" />
+    <Property Name="soluong" Type="Int32" />
+    <Property Name="maphieu" Type="Decimal" Nullable="false" Precision="20" Scale="0" />
+    <Property Name="tenhanghoa" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="stt" Type="Int32" Nullable="false" />
+  </EntityType>
+</Schema>

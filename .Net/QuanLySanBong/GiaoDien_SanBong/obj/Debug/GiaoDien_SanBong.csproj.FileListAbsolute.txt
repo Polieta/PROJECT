@@ -1,0 +1,203 @@
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe.config
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.pdb
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.AssemblyReference.cache
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.Properties.Resources.resources
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.GenerateResource.cache
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CoreCompileInputs.cache
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.exe
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.pdb
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangNhap.resources
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormTrangChu.resources
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormNhanSan.resources
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDichVu_ThanhToan.resources
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLySanBong.resources
+D:\Học tập\.NET\GiaoDien_SanBong\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyDichVu.resources
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe.config
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.pdb
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.AssemblyReference.cache
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangNhap.resources
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDichVu_ThanhToan.resources
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormNhanSan.resources
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyDichVu.resources
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyKhachHang.resources
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLySanBong.resources
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.Properties.Resources.resources
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.GenerateResource.cache
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CoreCompileInputs.cache
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.exe
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.pdb
+E:\Congnghe.net\doan\DoAn\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormTrangChu.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe.config
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.pdb
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.AssemblyReference.cache
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangNhap.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDichVu_ThanhToan.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormNhanSan.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyDichVu.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyKhachHang.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLySanBong.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormTrangChu.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.Properties.Resources.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.GenerateResource.cache
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CoreCompileInputs.cache
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.exe
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.pdb
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormBaoCaoDoanhThu.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormHoaDonThanhToan.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyNhanVien.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormThongTinCaNhan.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyHoaDon.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangKyNV.resources
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportSource.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.Shared.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\bin\Debug\stdole.dll
+D:\Học tập\DoAnNet\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CopyComplete
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe.config
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.pdb
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\stdole.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.AssemblyReference.cache
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormBaoCaoDoanhThu.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangKyNV.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangNhap.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDichVu_ThanhToan.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormHoaDonThanhToan.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormNhanSan.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyDichVu.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyHoaDon.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyKhachHang.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyNhanVien.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLySanBong.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormThongTinCaNhan.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormTrangChu.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.Properties.Resources.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.GenerateResource.cache
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CoreCompileInputs.cache
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CopyComplete
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.exe
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.pdb
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe.config
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.exe
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.pdb
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.pdb
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.CrystalReports.Engine.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportSource.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.Shared.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\stdole.dll
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.AssemblyReference.cache
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormBaoCaoDoanhThu.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangKyNV.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangNhap.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDichVu_ThanhToan.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormHoaDonThanhToan.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormNhanSan.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyDichVu.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyHoaDon.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyKhachHang.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyNhanVien.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLySanBong.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormThongTinCaNhan.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormTrangChu.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.Properties.Resources.resources
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.GenerateResource.cache
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CoreCompileInputs.cache
+E:\Congnghe.net\doan\final\DoAn-29_11_2023(2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CopyComplete
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe.config
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.pdb
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\stdole.dll
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.AssemblyReference.cache
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormBaoCaoDoanhThu.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangKyNV.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangNhap.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDichVu_ThanhToan.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormHoaDonThanhToan.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormNhanSan.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyDichVu.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyHoaDon.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyKhachHang.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyNhanVien.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLySanBong.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormThongTinCaNhan.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormTrangChu.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.Properties.Resources.resources
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.GenerateResource.cache
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CoreCompileInputs.cache
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CopyComplete
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.exe
+C:\Users\quand\Documents\Zalo Received Files\DoAn-29_11_2023 (2)\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\bin\Debug\GiaoDien_SanBong.exe.config
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.exe
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.pdb
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csprojResolveAssemblyReference.cache
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormBaoCaoDoanhThu.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangKyNV.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDangNhap.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormDichVu_ThanhToan.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormHoaDonThanhToan.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormNhanSan.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyDichVu.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyHoaDon.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyKhachHang.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLyNhanVien.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormQuanLySanBong.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormThongTinCaNhan.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.FormTrangChu.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.Properties.Resources.resources
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.GenerateResource.Cache
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.AssemblyReference.cache
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.SuggestedBindingRedirects.cache
+C:\NQC\HK1(Nam3)(2023-2024)\Nhập môn Công nghệ phần mềm\nop_btl\DoAn-29_11_2023\DoAn-29_11_2023\DoAn\GiaoDien_SanBong\obj\Debug\GiaoDien_SanBong.csproj.CoreCompileInputs.cache

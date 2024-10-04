@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chụp và quét mã QR</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        #videoWrapper {
+            margin-top: -200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #video {
+            margin-bottom: 20px;
+            max-width: 100%;
+            max-height: 70vh;
+        }
+
+        #captureButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db; /* Màu sắc nút chụp */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+            #captureButton:hover {
+                background-color: #2980b9; /* Màu sắc hover của nút chụp */
+            }
+
+        #result {
+            display: flex;
+            flex-direction: column; /* Hiển thị dữ liệu dưới dạng danh sách dọc */
+            align-items: center;
+        }
+
+        #capturedImage {
+            max-width: 100%;
+            max-height: 70vh;
+            margin-top: 20px;
+            border: 2px solid #3498db; /* Màu sắc viền ảnh đã chụp */
+            border-radius: 5px;
+        }
+        .swal2-input-group {
+            margin-bottom: 10px; /* Khoảng cách giữa các nhóm input */
+            display: flex;
+            align-items: center;
+        }
+        .swal2-input-group label {
+                flex: 0 0 120px; /* Điều chỉnh độ rộng của nhãn */
+                margin-right: 10px; /* Khoảng cách giữa nhãn và ô input */
+            }
+        .swal2-input-group input {
+                flex: 1; /* Ô input chiếm phần còn lại của không gian */
+            }
+    </style>
+</head>
+<body>
+    <div id="videoWrapper">
+        <video id="video" autoplay playsinline></video>
+        <button id="captureButton">Chụp ảnh</button>
+        <canvas id="canvas" style="display: none;"></canvas>
+        <div id="result"></div>
+        <img id="capturedImage" style="display: none;">
+    </div>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jsqr/dist/jsQR.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    const video = document.getElementById('video');
+    const canvas = document.getElementById('canvas');
+    const captureButton = document.getElementById('captureButton');
+    const resultDiv = document.getElementById('result');
+    const capturedImage = document.getElementById('capturedImage');
+    var maPhieu = localStorage.getItem('maPhieuXuat');
+    // Thiết lập thuộc tính willReadFrequently cho canvas
+    canvas.willReadFrequently = true;
+    async function startCamera() {
+        try {
+            const stream = await navigator.mediaDevices.getUserMedia({ video: true });
+            video.srcObject = stream;
+        } catch (error) {
+            console.error('Không thể truy cập camera: ', error);
+        }
+    }
+
+    startCamera();
+
+    captureButton.addEventListener('click', function () {
+        const context = canvas.getContext('2d');
+        canvas.width = video.videoWidth;
+        canvas.height = video.videoHeight;
+        context.drawImage(video, 0, 0, canvas.width, canvas.height);
+        capturedImage.src = canvas.toDataURL();
+        capturedImage.style.display = 'block';
+        setTimeout(function() {
+            capturedImage.style.display = 'none';
+        }, 2000);
+        const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+        const code = jsQR(imageData.data, imageData.width, imageData.height);
+        if (code) {
+            sendDataToController(code.data);
+        } else {
+            showErrorMessage("Không tìm thấy mã QR trong ảnh");
+        }
+    });
+
+    function sendDataToController(qrData) {
+        // Gọi controller để xử lý dữ liệu mã QR
+        $.ajax({
+            url: '/XuatKho/XuLyMaQR',
+            type: 'POST',
+            data: { qrData: qrData },
+            success: function (data) {
+                var ma = data.MaHang; 
+                if (ma) {
+                    timTenHangHoa(ma); 
+                }
+                displayProcessedData(data);
+            },
+            error: function () {
+                showErrorMessage('Đã xảy ra lỗi khi xử lý dữ liệu mã QR');
+            }
+        });
+    }
+
+    function displayProcessedData(data) {
+        Swal.fire({
+            icon: 'success',
+            title: 'Thông tin từ mã QR',
+            html:
+                '<div class="swal2-input-group">' +
+                '<label for="inputMa">Mã hàng hóa:</label>' +
+                '<input id="inputMa" class="swal2-input" value="' + data.MaHang + '">' +
+                '</div>' +
+                '<div class="swal2-input-group">' +
+                '<label for="tenHangHoa">Tên hàng hóa:</label>' +
+                '<input id="tenHangHoa" class="swal2-input" readonly>' +
+                '</div>' +
+                '<div class="swal2-input-group">' +
+                '<label for="inputLot">Số Lô:</label>' +
+                '<input id="inputLot" class="swal2-input" value="' + data.LoSX + '">' +
+                '</div>' +
+                '<div class="swal2-input-group">' +
+                '<label for="inputNsx">Ngày sản xuất:</label>' +
+                '<input id="inputNsx" class="swal2-input" value="' + data.NSX + '" readonly>' +
+                '</div>' +
+                '<div class="swal2-input-group">' +
+                '<label for="inputHsd">Hạn sử dụng:</label>' +
+                '<input id="inputHsd" class="swal2-input" value="' + data.HSD + '" readonly>' +
+                '</div>' +
+                '<div class="swal2-input-group">' +
+                '<label for="inputQuantity">Số lượng:</label>' +
+                '<input id="inputQuantity" class="swal2-input" type="number" min="1" value="1">' +
+                '</div>',
+                icon: 'info',
+                showCancelButton: true,
+                confirmButtonText: 'Lưu',
+                cancelButtonText: 'Chụp lại',
+                showCloseButton: true,
+                didOpen: () => {
+                    // Khởi tạo flatpickr cho các ô ngày tháng năm
+                    flatpickr("#inputNsx", {
+                        dateFormat: "d/m/Y",
+                        allowInput: true,
+                        defaultDate: nsx === "" ? null : nsx,
+                    });
+                flatpickr("#inputHsd", {
+                    dateFormat: "d/m/Y",
+                    allowInput: true,
+                    defaultDate: hsd === "" ? null : hsd,
+                });
+                document.getElementById('inputMa').addEventListener('input', function () {
+                    var newMa = this.value; // Lấy giá trị mới của ô "Mã hàng hóa"
+                    timTenHangHoa(newMa); // Gọi hàm `timTenHangHoa` với mã hàng hóa mới
+                });
+            }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    // Lấy giá trị từ các trường input
+                    var ma = document.getElementById('inputMa').value;
+                    var lot = document.getElementById('inputLot').value;
+                    var nsx = document.getElementById('inputNsx').value;
+                    var hsd = document.getElementById('inputHsd').value;
+                    var quantity = document.getElementById('inputQuantity').value;
+                    var tenHangHoa = document.getElementById('tenHangHoa').value;
+            if (tenHangHoa === "" || tenHangHoa === "không có") {
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Cảnh báo',
+                    text: 'Vui lòng nhập tên hàng hóa.',
+                });
+                return;
+            } else {
+                // Gửi dữ liệu đi sử dụng AJAX
+                $.ajax({
+                    url: '@Url.Action("LuuDuLieuTam", "NhapKho")',
+                    type: 'POST',
+                    data: {
+                        maphieu: maPhieu,
+                        mahang: ma,
+                        solo: lot,
+                        soluong: quantity,
+                        nsx: nsx,
+                        hsd: hsd
+                    },
+                    success: function (response) {
+                        if (response.success) {
+                            Swal.fire({
+                                title: "Thành công",
+                                text: "Dữ liệu đã được thêm",
+                                icon: "success",
+                                willClose: () => {
+                                    window.location.href = '@Url.Action("ScanQR", "BaoCao")';
+                        }
+                    });
+            } else {
+            // Xử lý khi có lỗi từ phía server
+                                    Swal.fire({
+                                        icon: 'error',
+                                        title: 'Lỗi',
+                                        text: 'Đã có lỗi xảy ra khi lưu dữ liệu.',
+                                    })
+            }
+            },
+            error: function () {
+                // Xử lý khi có lỗi xảy ra trong quá trình gửi request
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Lỗi',
+                    text: 'Đã có lỗi xảy ra khi gửi dữ liệu.',
+                });
+            }
+            });
+            }
+            } else {
+                window.location.href = '@Url.Action("ScanQR", "BaoCao")';
+            }
+            });
+        }
+
+    function showErrorMessage(message) {
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: message
+        });
+    }
+
+    function timTenHangHoa(ma) {
+        var maHangHoa = ma;
+        if (maHangHoa !== '') {
+            $.ajax({
+                url: '/NhapKho/TimTenHangHoa',
+                type: 'GET',
+                data: { maHangHoa: maHangHoa },
+                success: function (response) {
+                    if (response.success) {
+                        document.getElementById('tenHangHoa').value = response.tenHangHoa;
+                    }
+                },
+            });
+        } else {
+            document.getElementById('tenHangHoa').value = "không có";
+        }
+    }
+</script>

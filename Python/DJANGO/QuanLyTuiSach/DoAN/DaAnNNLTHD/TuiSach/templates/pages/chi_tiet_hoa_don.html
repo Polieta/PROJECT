@@ -1,0 +1,24 @@
+{% extends 'pages/admin.html' %}
+{% block right_content %}
+<div class="container mt-5">
+    <h2>Chi Tiết Hóa Đơn: {{ don_hang.ma_don_hang }}</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Sản Phẩm</th>
+                <th>Số Lượng</th>
+                <th>Đơn Giá</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for chi_tiet in chi_tiet_don_hang_list %}
+                <tr>
+                    <td>{{ chi_tiet.ma_san_pham.ten_san_pham }}</td>
+                    <td>{{ chi_tiet.so_luong }}</td>
+                    <td>{{ chi_tiet.gia_don_vi }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
